@@ -2,4 +2,7 @@ __author__ = 'Travis Moy'
 
 
 class Camera:
-    pass
+    def __init__(self, level):
+        self.center = [0, 0]
+        self.level = level
+        self.sprites = []

@@ -3,6 +3,10 @@ __author__ = 'Travis Moy'
 
 import pyglet
 from pyglet.window import key
+from tile import Tile
+
+t = Tile()
+t.load('testtile.txt')
 
 window = pyglet.window.Window()
 image = pyglet.resource.image('images/floor.png')
