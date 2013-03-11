@@ -7,11 +7,9 @@ from camera import Camera
 from level import Level
 
 
-t = Tile()
-t.load('testtile.txt')
-
 window = pyglet.window.Window()
 level = Level()
+level.load(None)
 image = pyglet.resource.image('images/Frame268x268.png')
 sprite = pyglet.sprite.Sprite(image)
 
@@ -23,6 +21,5 @@ def on_draw():
     window.clear()
     Camera.batch.draw()
     sprite.draw()
-
 
 pyglet.app.run()

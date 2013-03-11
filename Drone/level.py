@@ -3,6 +3,7 @@ __author__ = 'Travis Moy'
 
 from tile import Tile
 import math
+import warnings
 
 
 class Level:
@@ -21,4 +22,4 @@ class Level:
         return tile.at(int(x % Tile.SIZE_ACROSS), int(y % Tile.SIZE_ACROSS))
 
     def load(self, file):
-        pass
+        warnings.warn("Function load() is a placeholder!")
