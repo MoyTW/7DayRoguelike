@@ -10,8 +10,6 @@ from level import Level
 
 level = Level()
 level.load(None)
-image = pyglet.resource.image('images/Frame268x268.png')
-sprite = pyglet.sprite.Sprite(image)
 
 cam = Camera(level, (0, 0), (640, 480))
 cam.center_on(5, 9)
@@ -42,6 +40,5 @@ def on_draw():
     window.clear()
     cam.batch.draw()
     cam.cursor.draw()
-    #sprite.draw()
 
 pyglet.app.run()

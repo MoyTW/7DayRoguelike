@@ -17,5 +17,8 @@ class Cell:
 
     # This should be modified so as to return different images depending on the fow_state!
     def get_image(self):
-        warnings.warn("Function get_image() is a placeholder!")
-        return self._image
+        warnings.warn("Function get_image() in Cell is a placeholder!")
+        if self.contains:
+            return self.contains[-1].get_image()
+        else:
+            return self._image

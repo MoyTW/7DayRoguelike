@@ -1,17 +1,32 @@
 __author__ = 'Travis Moy'
 
 from definitions import CMO
+from definitions import DIR
 
 
 default_combat_costs = {CMO.MOVE_FORWARD: 1, CMO.MOVE_BACKWARDS: 1.5,
                         CMO.TURN_RIGHT: .33, CMO.TURN_LEFT: .33}
 
 
+class MoveOrder:
+    def __init__(self, order, end_tile, facing):
+        self.order = order
+        self.end_tile = end_tile
+        self.facing = facing
+
+
 class Mobile:
-    def __init__(self, combat_costs=default_combat_costs, movement_points=1):
-        self.movement_queue = []
+    current_cell = [0, 0]
+    current_facing = DIR.N
+    movement_queue = []
+    _is_alerted = False
+
+    # combat_costs = {}
+    # _movement_points = 1
+
+    def __init__(self, level, combat_costs=default_combat_costs, movement_points=1):
+        self.level = level
         self.combat_costs = combat_costs
-        self._is_alerted = False
         self._movement_points = movement_points
 
     def queue_move(self, move):
@@ -39,24 +54,29 @@ class Mobile:
     def is_alerted(self):
         return self._is_alerted
 
-    # Need access to the map for this!
-    def _is_valid_exploration_move(self, move):
-        pass
+    # Returns none if it's not valid!
+    # Also, you need facing information!
+    # Returns the MoveOrder.
+    def _find_exploration_move_end_tile(self, move):
+        end_position = DIR.position_to(move, self.current_cell)
+        #end_cell = level.at(x = end_position.)
 
-    # Need access to the map for this!
-    def _is_valid_combat_move(self, move):
+    # Wait, you also need facing information!
+    def _find_combat_move_end_tile(self, move):
         pass
 
     def _queue_exploration(self, move):
-        if (not self.movement_queue) and self._is_valid_exploration_move(move):
-            self.movement_queue.append(move)
+        move_order = self._find_exploration_move_end_tile(move)
+        if (not self.movement_queue) and move_order is not None:
+            self.movement_queue.append(move_order)
 
     def _queue_combat(self, move):
+        move_order = self._find_combat_move_end_tile(move)
         if move in self.combat_costs and \
-                self.is_valid_combat_move(move) and \
+                move_order is not None and \
                 self._movement_points >= self.combat_costs[move]:
             self.movement_points -= self.combat_costs[move]
-            self.movement_queue.append(move)
+            self.movement_queue.append(move_order)
 
     # Need access to map for this!
     def _commit_exploration(self):
