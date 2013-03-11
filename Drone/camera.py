@@ -1,9 +1,8 @@
-from pyglet.gl.glext_arb import GL_SPRITE_AXIAL_SGIX
-
 __author__ = 'Travis Moy'
 
 import pyglet
 import math
+from definitions import DIR
 
 
 class Camera:
@@ -22,22 +21,42 @@ class Camera:
         self.level = level
 
     def center_on(self, x, y):
-        sprite_across = self.IMAGE_ACROSS * self._magnification
+        self._center_tile = [x, y]
         lower_left_index = (x - math.floor(self._num_rows / 2),
                             y - math.floor(self._num_cols / 2))
         for row in range(0, self._num_rows):
             for col in range(0, self._num_cols):
-                cell = self.level.at(lower_left_index[0] + row,
-                                     lower_left_index[1] + col)
-                self._sprites[row][col] = pyglet.sprite.Sprite(
-                    cell.get_image(),
-                    x=self._lower_left_pixel[0] + row * sprite_across,
-                    y=self._lower_left_pixel[1] + col * sprite_across,
-                    batch=self.batch
-                )
+                self._sprites[row][col] = self._get_sprite_at(lower_left_index, row, col)
+
+    def _get_sprite_at(self, lower_left_index, row, col):
+        sprite_across = self.IMAGE_ACROSS * self._magnification
+        cell = self.level.at(lower_left_index[0] + row,
+                             lower_left_index[1] + col)
+        sprite = None
+        if cell is not None:
+            sprite = pyglet.sprite.Sprite(
+                cell.get_image(),
+                x=self._lower_left_pixel[0] + row * sprite_across,
+                y=self._lower_left_pixel[1] + col * sprite_across,
+                batch=self.batch
+            )
+        return sprite
 
     def step(self, direction):
-        pass
+        if direction == DIR.N or direction == DIR.E or direction == DIR.S or direction == DIR.W:
+            self._step_cardinal(direction)
+        elif direction == DIR.NE:
+            self._step_cardinal(DIR.N)
+            self._step_cardinal(DIR.E)
+        elif direction == DIR.SE:
+            self._step_cardinal(DIR.S)
+            self._step_cardinal(DIR.E)
+        elif direction == DIR.NW:
+            self._step_cardinal(DIR.N)
+            self._step_cardinal(DIR.W)
+        elif direction == DIR.SW:
+            self._step_cardinal(DIR.S)
+            self._step_cardinal(DIR.W)
 
     def resize_view(self, lower_left, upper_right):
         center_pixel = ((upper_right[0] + lower_left[0]) / 2,
@@ -55,4 +74,12 @@ class Camera:
                                       for _ in range(self._num_rows)]
 
     def _step_cardinal(self, direction):
-        pass
+        if direction == DIR.N:
+            self._center_tile[1] += 1
+        elif direction == DIR.E:
+            self._center_tile[0] += 1
+        elif direction == DIR.S:
+            self._center_tile[1] -= 1
+        elif direction == DIR.W:
+            self._center_tile[0] -= 1
+        self.center_on(self._center_tile[0], self._center_tile[1])

@@ -22,4 +22,7 @@ class Level:
         return tile.at(int(x % Tile.SIZE_ACROSS), int(y % Tile.SIZE_ACROSS))
 
     def load(self, file):
-        warnings.warn("Function load() is a placeholder!")
+        warnings.warn("Function load() is a placeholder! It is hardcoded to load testtile.txt!")
+        for row in range(0, self.TILES_ACROSS):
+            for col in range(0, self.TILES_ACROSS):
+                self.tiles[row][col].load("testtile.txt")

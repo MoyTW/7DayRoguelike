@@ -8,11 +8,11 @@ import warnings
 
 class Cell:
 
-    def __init__(self, image=pyglet.resource.image('images/defaultcell.png'),
+    def __init__(self, image_file='images/defaultcell.png',
                  passable=True, fow_state=FOW.VISIBLE):
         self.passable = passable
         self.fow_state = fow_state
-        self._image = image
+        self._image = pyglet.resource.image(image_file)
         self.contains = []
 
     # This should be modified so as to return different images depending on the fow_state!
