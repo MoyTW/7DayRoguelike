@@ -8,20 +8,22 @@ from definitions import DIR
 class Camera:
     IMAGE_ACROSS = 64
     batch = pyglet.graphics.Batch()
+    cursor_image = pyglet.resource.image('images/camera_cursor.png')
+    center_tile = [0, 0]
 
     _magnification = 1
-    _center_tile = [0, 0]
     _num_rows = 0
     _num_cols = 0
     _lower_left_pixel = (0, 0)
     _sprites = []
 
     def __init__(self, level, lower_left=(0, 0), upper_right=(200, 100)):
-        self.resize_view(lower_left, upper_right)
+        self.cursor = pyglet.sprite.Sprite(self.cursor_image)
         self.level = level
+        self.resize_view(lower_left, upper_right)
 
     def center_on(self, x, y):
-        self._center_tile = [x, y]
+        self.center_tile = [x, y]
         lower_left_index = (x - math.floor(self._num_rows / 2),
                             y - math.floor(self._num_cols / 2))
         for row in range(0, self._num_rows):
@@ -59,8 +61,10 @@ class Camera:
             self._step_cardinal(DIR.W)
 
     def resize_view(self, lower_left, upper_right):
+        sprite_across = self.IMAGE_ACROSS * self._magnification
         center_pixel = ((upper_right[0] + lower_left[0]) / 2,
                         (upper_right[1] + lower_left[1]) / 2)
+        self.cursor.set_position(center_pixel[0] - sprite_across / 2, center_pixel[1] - sprite_across / 2)
         sprite_across = self.IMAGE_ACROSS * self._magnification
         self._num_rows = 1 + int(math.ceil((float(upper_right[0] - lower_left[0])) /
                                  float(sprite_across)))
@@ -75,11 +79,11 @@ class Camera:
 
     def _step_cardinal(self, direction):
         if direction == DIR.N:
-            self._center_tile[1] += 1
+            self.center_tile[1] += 1
         elif direction == DIR.E:
-            self._center_tile[0] += 1
+            self.center_tile[0] += 1
         elif direction == DIR.S:
-            self._center_tile[1] -= 1
+            self.center_tile[1] -= 1
         elif direction == DIR.W:
-            self._center_tile[0] -= 1
-        self.center_on(self._center_tile[0], self._center_tile[1])
+            self.center_tile[0] -= 1
+        self.center_on(self.center_tile[0], self.center_tile[1])
