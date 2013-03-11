@@ -1,20 +1,21 @@
 __author__ = 'Travis Moy'
 
 from definitions import *
+from entity import Entity
 
 
 default_combat_costs = {CMO.MOVE_FORWARD: 1, CMO.MOVE_BACKWARDS: 1.5,
                         CMO.TURN_RIGHT: .33, CMO.TURN_LEFT: .33}
 
 
-class MoveOrder:
+class MoveOrder(object):
     def __init__(self, order, end_tile, facing):
         self.order = order
         self.end_tile = end_tile
         self.facing = facing
 
 
-class Mobile:
+class Mobile(Entity):
     current_cell = Position(0, 0)
     current_facing = DIR.N
     movement_queue = []
@@ -79,9 +80,11 @@ class Mobile:
             self.movement_points -= self.combat_costs[move]
             self.movement_queue.append(move_order)
 
-    # Need access to map for this!
     def _commit_exploration(self):
-        pass
+        if self.movement_queue:
+            target_cell = self.movement_queue[0].end_tile
+            self.level.move_entity_from_to(self, self.current_cell.x, self.current_cell.y,
+                                           target_cell.x, target_cell.y)
 
     # We're ignoring combat movement for now.
     def _commit_combat(self):

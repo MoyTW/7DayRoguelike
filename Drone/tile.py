@@ -5,7 +5,7 @@ from cell import Cell
 import warnings
 
 
-class Tile:
+class Tile(object):
     SIZE_ACROSS = 4
     all_entities = []
 

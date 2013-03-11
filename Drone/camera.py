@@ -5,7 +5,7 @@ import math
 from definitions import DIR
 
 
-class Camera:
+class Camera(object):
     IMAGE_ACROSS = 64
     batch = pyglet.graphics.Batch()
     cursor_image = pyglet.resource.image('images/camera_cursor.png')

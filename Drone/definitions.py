@@ -20,7 +20,7 @@ CMO = enum('TURN_LEFT', 'TURN_RIGHT', 'MOVE_FORWARD', 'MOVE_BACKWARDS', 'REVERSE
 
 
 # This isn't an enum any more!
-class DIR:
+class DIR(object):
     N, NE, E, SE, S, SW, W, NW = range(0, 8)
 
     def position_to_of(self, direction, current_cell):

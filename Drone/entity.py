@@ -3,7 +3,7 @@ __author__ = 'Travis Moy'
 import warnings
 
 
-class Entity:
+class Entity(object):
     exclusive_inhabitant = False
 
     def __init__(self, image):

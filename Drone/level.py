@@ -6,7 +6,7 @@ import math
 import warnings
 
 
-class Level:
+class Level(object):
     TILES_ACROSS = 4
 
     def __init__(self):

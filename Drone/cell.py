@@ -6,7 +6,7 @@ from definitions import FOW
 import warnings
 
 
-class Cell:
+class Cell(object):
 
     def __init__(self, image_file='images/defaultcell.png',
                  passable=True, fow_state=FOW.VISIBLE):
