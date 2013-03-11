@@ -20,6 +20,7 @@ class Tile(object):
         self.cells[x][y].contains.append(entity)
 
     def remove_entity_from(self, entity, x, y):
+        print self.cells[x][y].contains
         self.all_entities.remove(entity)
         self.cells[x][y].contains.remove(entity)
 

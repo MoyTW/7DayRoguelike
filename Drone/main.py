@@ -6,10 +6,17 @@ from definitions import DIR
 from pyglet.window import key
 from camera import Camera
 from level import Level
+from mobile import *
 
 
 level = Level()
 level.load(None)
+
+droneimage = pyglet.resource.image('images/boxydrone.png')
+drone = Mobile(droneimage, level)
+
+level.place_entity_at(drone, 5, 9)
+drone.current_cell = Position(5, 9)
 
 cam = Camera(level, (0, 0), (640, 480))
 cam.center_on(5, 9)
@@ -20,12 +27,20 @@ window = pyglet.window.Window()
 def on_key_press(symbol, modifiers):
     if symbol == key.NUM_2:
         cam.step(DIR.S)
+        drone.queue_move(DIR.S)
+        drone.commit_moves()
     elif symbol == key.NUM_6:
         cam.step(DIR.E)
+        drone.queue_move(DIR.E)
+        drone.commit_moves()
     elif symbol == key.NUM_8:
         cam.step(DIR.N)
+        drone.queue_move(DIR.N)
+        drone.commit_moves()
     elif symbol == key.NUM_4:
         cam.step(DIR.W)
+        drone.queue_move(DIR.W)
+        drone.commit_moves()
     elif symbol == key.NUM_9:
         cam.step(DIR.NE)
     elif symbol == key.NUM_3:

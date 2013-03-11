@@ -1,6 +1,7 @@
 __author__ = 'Travis Moy'
 
-from definitions import *
+import definitions
+from definitions import CMO, DIR, Position
 from entity import Entity
 
 
@@ -14,6 +15,12 @@ class MoveOrder(object):
         self.end_tile = end_tile
         self.facing = facing
 
+    def __repr__(self):
+        return "order={0} end_tile={1} facing={2}".format(self.order, self.end_tile, self.facing)
+
+    def __str__(self):
+        return "order={0} end_tile={1} facing={2}".format(self.order, self.end_tile, self.facing)
+
 
 class Mobile(Entity):
     current_cell = Position(0, 0)
@@ -24,13 +31,14 @@ class Mobile(Entity):
     # combat_costs = {}
     # _movement_points = 1
 
-    def __init__(self, level, combat_costs=default_combat_costs, movement_points=1):
+    def __init__(self, image, level, combat_costs=default_combat_costs, movement_points=1):
+        super(Mobile, self).__init__(image)
         self.level = level
         self.combat_costs = combat_costs
         self._movement_points = movement_points
 
     def queue_move(self, move):
-        if not self.is_alerted:
+        if not self.is_alerted():
             self._queue_exploration(move)
         else:
             self._queue_combat(move)
@@ -40,10 +48,11 @@ class Mobile(Entity):
             self.movement_queue.pop()
 
     def commit_moves(self):
-        if not self.is_alerted:
+        if not self.is_alerted():
             self._commit_exploration()
         else:
             self._commit_combat()
+        self.movement_queue = []
 
     def alert(self):
         self.alert = True
@@ -56,10 +65,11 @@ class Mobile(Entity):
 
     # Returns the MoveOrder if the square is valid and passable, else returns None.
     def _find_exploration_move_end_tile(self, move):
-        end_position = DIR.position_to_of(move, self.current_cell)
+        end_position = definitions.position_to_of(move, self.current_cell)
         end_cell = self.level.at(x=end_position.x, y=end_position.y)
         if end_cell is not None and end_cell.get_passable():
-            return MoveOrder(move, end_cell, move)
+            print "end_position: {0}".format(end_position)
+            return MoveOrder(move, end_position, move)
         else:
             return None
 
@@ -85,6 +95,7 @@ class Mobile(Entity):
             target_cell = self.movement_queue[0].end_tile
             self.level.move_entity_from_to(self, self.current_cell.x, self.current_cell.y,
                                            target_cell.x, target_cell.y)
+            self.current_cell = target_cell
 
     # We're ignoring combat movement for now.
     def _commit_combat(self):
