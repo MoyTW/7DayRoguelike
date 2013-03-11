@@ -26,21 +26,21 @@ window = pyglet.window.Window()
 @window.event
 def on_key_press(symbol, modifiers):
     if symbol == key.NUM_2:
-        cam.step(DIR.S)
         drone.queue_move(DIR.S)
         drone.commit_moves()
+        cam.step(DIR.S)
     elif symbol == key.NUM_6:
-        cam.step(DIR.E)
         drone.queue_move(DIR.E)
         drone.commit_moves()
+        cam.step(DIR.E)
     elif symbol == key.NUM_8:
-        cam.step(DIR.N)
         drone.queue_move(DIR.N)
         drone.commit_moves()
+        cam.step(DIR.N)
     elif symbol == key.NUM_4:
-        cam.step(DIR.W)
         drone.queue_move(DIR.W)
         drone.commit_moves()
+        cam.step(DIR.W)
     elif symbol == key.NUM_9:
         cam.step(DIR.NE)
     elif symbol == key.NUM_3:
