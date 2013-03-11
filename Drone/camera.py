@@ -9,8 +9,8 @@ class Camera:
     IMAGE_ACROSS = 64
     batch = pyglet.graphics.Batch()
     cursor_image = pyglet.resource.image('images/camera_cursor.png')
-    center_tile = [0, 0]
 
+    _center_tile = [0, 0]
     _magnification = 1
     _num_rows = 0
     _num_cols = 0
@@ -23,7 +23,7 @@ class Camera:
         self.resize_view(lower_left, upper_right)
 
     def center_on(self, x, y):
-        self.center_tile = [x, y]
+        self._center_tile = [x, y]
         lower_left_index = (x - math.floor(self._num_rows / 2),
                             y - math.floor(self._num_cols / 2))
         for row in range(0, self._num_rows):
@@ -79,11 +79,11 @@ class Camera:
 
     def _step_cardinal(self, direction):
         if direction == DIR.N:
-            self.center_tile[1] += 1
+            self._center_tile[1] += 1
         elif direction == DIR.E:
-            self.center_tile[0] += 1
+            self._center_tile[0] += 1
         elif direction == DIR.S:
-            self.center_tile[1] -= 1
+            self._center_tile[1] -= 1
         elif direction == DIR.W:
-            self.center_tile[0] -= 1
-        self.center_on(self.center_tile[0], self.center_tile[1])
+            self._center_tile[0] -= 1
+        self.center_on(self._center_tile[0], self._center_tile[1])

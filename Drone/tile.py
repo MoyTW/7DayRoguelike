@@ -7,12 +7,21 @@ import warnings
 
 class Tile:
     SIZE_ACROSS = 4
+    all_entities = []
 
     def __init__(self):
         self.cells = [[Cell() for _ in range(self.SIZE_ACROSS)] for _ in range(self.SIZE_ACROSS)]
 
     def at(self, x, y):
         return self.cells[x][y]
+
+    def place_entity_at(self, entity, x, y):
+        self.all_entities.append(entity)
+        self.cells[x][y].contains.append(entity)
+
+    def remove_entity_from(self, entity, x, y):
+        self.all_entities.remove(entity)
+        self.cells[x][y].contains.remove(entity)
 
     def load(self, file):
         f = open(file, 'r')

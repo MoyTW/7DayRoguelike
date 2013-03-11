@@ -8,13 +8,13 @@
     <file path="/Level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362903264165" ignored="false" />
     <file path="/Tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362926429786" ignored="false" />
     <file path="/Entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362906443214" ignored="false" />
-    <file path="/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362996988551" ignored="false" />
-    <file path="/camera.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362997149870" ignored="false" />
+    <file path="/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363007112488" ignored="false" />
+    <file path="/camera.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363002080265" ignored="false" />
     <file path="/definitions.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363001246948" ignored="false" />
     <file path="/cell.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363001583859" ignored="false" />
     <file path="/mobile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363001721449" ignored="false" />
-    <file path="/tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362988429908" ignored="false" />
-    <file path="/level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363001372194" ignored="false" />
+    <file path="/tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008086528" ignored="false" />
+    <file path="/level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008272272" ignored="false" />
     <file path="/testtile.txt" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362997104933" ignored="false" />
     <file path="/entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362998582446" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,10 +38,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="level.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="level.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/level.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
+            <state line="53" column="48" selection-start="1846" selection-end="1846" vertical-scroll-proportion="1.1616162">
               <folding>
                 <element signature="e#28#49#0" expanded="true" />
               </folding>
@@ -49,21 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#28#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobile.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mobile.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="45" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.9183673">
+            <state line="58" column="30" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#618#725#0" expanded="false" />
                 <element signature="e#767#883#0" expanded="false" />
@@ -77,28 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="definitions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/definitions.py">
+      <file leaf-file-name="tile.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="15" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cell.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cell.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="28" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="entity.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+            <state line="23" column="48" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,15 +89,15 @@
         <option value="$PROJECT_DIR$/Level.py" />
         <option value="$PROJECT_DIR$/Tile.py" />
         <option value="$PROJECT_DIR$/Entity.py" />
-        <option value="$PROJECT_DIR$/tile.py" />
         <option value="$PROJECT_DIR$/testtile.txt" />
-        <option value="$PROJECT_DIR$/camera.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/entity.py" />
-        <option value="$PROJECT_DIR$/level.py" />
         <option value="$PROJECT_DIR$/cell.py" />
         <option value="$PROJECT_DIR$/definitions.py" />
         <option value="$PROJECT_DIR$/mobile.py" />
+        <option value="$PROJECT_DIR$/camera.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/tile.py" />
+        <option value="$PROJECT_DIR$/level.py" />
       </list>
     </option>
   </component>
@@ -336,14 +307,14 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.67675674" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.110278375" sideWeight="0.67027026" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.110278375" sideWeight="0.67675674" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32324323" sideWeight="0.9862816" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32324323" sideWeight="0.9862816" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -407,12 +378,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/camera.py</url>
-          <line>2</line>
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="3" />
     </breakpoint-manager>
   </component>
@@ -433,22 +398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="19" selection-start="99" selection-end="99" vertical-scroll-proportion="-0.04040404">
-          <folding>
-            <element signature="e#28#49#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="249" selection-end="249" vertical-scroll-proportion="0.4040404">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testtile.txt">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -459,6 +408,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="21" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/entity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="43" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
@@ -466,18 +424,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/level.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#28#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cell.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/definitions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="15" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -491,16 +447,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/definitions.py">
+    <entry file="file://$PROJECT_DIR$/tile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="15" selection-start="671" selection-end="671" vertical-scroll-proportion="0.0">
+        <state line="23" column="48" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="45" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.9183673">
+        <state line="58" column="30" selection-start="1524" selection-end="1524" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#618#725#0" expanded="false" />
             <element signature="e#767#883#0" expanded="false" />
@@ -509,6 +465,15 @@
             <element signature="e#1161#1178#0" expanded="false" />
             <element signature="e#1211#1229#0" expanded="false" />
             <element signature="e#1265#1294#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="48" selection-start="1846" selection-end="1846" vertical-scroll-proportion="1.1616162">
+          <folding>
+            <element signature="e#28#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
