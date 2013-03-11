@@ -13,9 +13,9 @@
     <file path="/definitions.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363009679357" ignored="false" />
     <file path="/cell.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008846365" ignored="false" />
     <file path="/mobile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363012155113" ignored="false" />
-    <file path="/tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363011934960" ignored="false" />
-    <file path="/level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363011780004" ignored="false" />
-    <file path="/testtile.txt" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362997104933" ignored="false" />
+    <file path="/tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363013210631" ignored="false" />
+    <file path="/level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363012984546" ignored="false" />
+    <file path="/testtile.txt" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363012780982" ignored="false" />
     <file path="/entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008820696" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +38,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="23" selection-start="975" selection-end="975" vertical-scroll-proportion="0.9191919">
+            <state line="42" column="23" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#28#41#0" expanded="true" />
               </folding>
@@ -52,7 +52,7 @@
       <file leaf-file-name="level.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/level.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0">
+            <state line="36" column="31" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#28#49#0" expanded="true" />
               </folding>
@@ -63,7 +63,7 @@
       <file leaf-file-name="mobile.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="57" selection-start="3009" selection-end="3009" vertical-scroll-proportion="0.0">
+            <state line="53" column="22" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#27#45#0" expanded="true" />
                 <element signature="e#1572#1589#0" expanded="false" />
@@ -74,10 +74,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tile.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="testtile.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testtile.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="7" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tile.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="39" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
+            <state line="42" column="52" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.36700338">
               <folding />
             </state>
           </provider>
@@ -97,15 +106,15 @@
         <option value="$PROJECT_DIR$/Level.py" />
         <option value="$PROJECT_DIR$/Tile.py" />
         <option value="$PROJECT_DIR$/Entity.py" />
-        <option value="$PROJECT_DIR$/testtile.txt" />
         <option value="$PROJECT_DIR$/entity.py" />
         <option value="$PROJECT_DIR$/camera.py" />
         <option value="$PROJECT_DIR$/cell.py" />
         <option value="$PROJECT_DIR$/definitions.py" />
-        <option value="$PROJECT_DIR$/level.py" />
-        <option value="$PROJECT_DIR$/tile.py" />
-        <option value="$PROJECT_DIR$/mobile.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/testtile.txt" />
+        <option value="$PROJECT_DIR$/level.py" />
+        <option value="$PROJECT_DIR$/mobile.py" />
+        <option value="$PROJECT_DIR$/tile.py" />
       </list>
     </option>
   </component>
@@ -406,16 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testtile.txt">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="7" selection-start="91" selection-end="91" vertical-scroll-proportion="0.24242425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/camera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
@@ -455,23 +454,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0">
+        <state line="36" column="31" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#28#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tile.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="39" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="42" column="23" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#28#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="57" selection-start="3009" selection-end="3009" vertical-scroll-proportion="0.0">
+        <state line="53" column="22" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#27#45#0" expanded="true" />
             <element signature="e#1572#1589#0" expanded="false" />
@@ -481,12 +482,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/testtile.txt">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="23" selection-start="975" selection-end="975" vertical-scroll-proportion="0.9191919">
-          <folding>
-            <element signature="e#28#41#0" expanded="true" />
-          </folding>
+        <state line="2" column="7" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="52" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.36700338">
+          <folding />
         </state>
       </provider>
     </entry>

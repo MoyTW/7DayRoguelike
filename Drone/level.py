@@ -30,9 +30,8 @@ class Level(object):
         except IndexError:
             return None
 
-    # Next task: HANDLE ENTITY PLACEMENT, REMOVAL!
     def place_entity_at(self, entity, x, y):
-        print "Attempting to place {0} at ({1}, {2})".format(entity, x, y)
+        warnings.warn("Level.place_entity_at() does not set the location of the entity!")
         tile = self.tile_at(x, y)
         if tile is not None:
             self.all_entities.append(entity)
@@ -49,15 +48,13 @@ class Level(object):
             raise IndexError("Targeted cell x={0} y={1} does not exist!".format(x, y))
 
     def move_entity_from_to(self, entity, old_x, old_y, new_x, new_y):
-        self.remove_entity_from(entity, old_x, old_y)
-        self.place_entity_at(entity, new_x, new_y)
-        #old_tile = self.tile_at(old_x, old_y)
-        #new_tile = self.tile_at(new_x, new_y)
-        #if old_tile is not None and new_tile is not None:
-            #old_tile.remove_entity_from(entity, int(old_x % Tile.SIZE_ACROSS), int(old_y % Tile.SIZE_ACROSS))
-            #new_tile.place_entity_at(entity, int(old_x % Tile.SIZE_ACROSS), int(old_y % Tile.SIZE_ACROSS))
-        #else:
-            #raise IndexError("One of the cells ({0}, {1}) ({2}, {3}) is invalid!".format(old_x, old_y, new_x, new_y))
+        old_tile = self.tile_at(old_x, old_y)
+        new_tile = self.tile_at(new_x, new_y)
+        if old_tile is not None and new_tile is not None:
+            old_tile.remove_entity_from(entity, int(old_x % Tile.SIZE_ACROSS), int(old_y % Tile.SIZE_ACROSS))
+            new_tile.place_entity_at(entity, int(new_x % Tile.SIZE_ACROSS), int(new_y % Tile.SIZE_ACROSS))
+        else:
+            raise IndexError("One of the cells ({0}, {1}) ({2}, {3}) is invalid!".format(old_x, old_y, new_x, new_y))
 
     def load(self, file):
         warnings.warn("Function load() is a placeholder! It is hardcoded to load testtile.txt!")

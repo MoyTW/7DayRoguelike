@@ -20,7 +20,6 @@ class Tile(object):
         self.cells[x][y].contains.append(entity)
 
     def remove_entity_from(self, entity, x, y):
-        print self.cells[x][y].contains
         self.all_entities.remove(entity)
         self.cells[x][y].contains.remove(entity)
 
@@ -41,7 +40,9 @@ class Tile(object):
         cell_types = dict()
         for i in range(1, index_begin_map):
             line = lines[i].strip().split(',')
-            cell_types[line[0]] = (line[1], line[2])
+            cell_types[line[0]] = (line[1] == 'True', line[2])
+
+        print cell_types
 
         # For each line, break it into columns and create the appropriate Cell objects.
         # This is just confusing as heck. You will have to revisit this at some point.
