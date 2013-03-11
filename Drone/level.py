@@ -12,6 +12,7 @@ class Level:
     def __init__(self):
         self.tiles = [[Tile() for _ in range(self.TILES_ACROSS)] for _ in range(self.TILES_ACROSS)]
 
+    # Returns the cell at x, y; otherwise, returns None
     def at(self, x, y):
         try:
             x_index = int(math.floor(x / Tile.SIZE_ACROSS))

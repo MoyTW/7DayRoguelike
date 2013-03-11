@@ -22,3 +22,6 @@ class Cell:
             return self.contains[-1].get_image()
         else:
             return self._image
+
+    def get_passable(self):
+        return self.passable

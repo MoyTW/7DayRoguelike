@@ -23,7 +23,7 @@ CMO = enum('TURN_LEFT', 'TURN_RIGHT', 'MOVE_FORWARD', 'MOVE_BACKWARDS', 'REVERSE
 class DIR:
     N, NE, E, SE, S, SW, W, NW = range(0, 8)
 
-    def position_to(self, direction, current_cell):
+    def position_to_of(self, direction, current_cell):
         if direction == DIR.N:
             return Position(current_cell[0], current_cell[1] + 1)
         elif direction == DIR.NE:

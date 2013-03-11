@@ -1,7 +1,6 @@
 __author__ = 'Travis Moy'
 
-from definitions import CMO
-from definitions import DIR
+from definitions import *
 
 
 default_combat_costs = {CMO.MOVE_FORWARD: 1, CMO.MOVE_BACKWARDS: 1.5,
@@ -16,7 +15,7 @@ class MoveOrder:
 
 
 class Mobile:
-    current_cell = [0, 0]
+    current_cell = Position(0, 0)
     current_facing = DIR.N
     movement_queue = []
     _is_alerted = False
@@ -54,14 +53,16 @@ class Mobile:
     def is_alerted(self):
         return self._is_alerted
 
-    # Returns none if it's not valid!
-    # Also, you need facing information!
-    # Returns the MoveOrder.
+    # Returns the MoveOrder if the square is valid and passable, else returns None.
     def _find_exploration_move_end_tile(self, move):
-        end_position = DIR.position_to(move, self.current_cell)
-        #end_cell = level.at(x = end_position.)
+        end_position = DIR.position_to_of(move, self.current_cell)
+        end_cell = self.level.at(x=end_position.x, y=end_position.y)
+        if end_cell is not None and end_cell.get_passable():
+            return MoveOrder(move, end_cell, move)
+        else:
+            return None
 
-    # Wait, you also need facing information!
+    # We're ignoring combat movement for now.
     def _find_combat_move_end_tile(self, move):
         pass
 
@@ -82,6 +83,6 @@ class Mobile:
     def _commit_exploration(self):
         pass
 
-    # Need access to map for this!
+    # We're ignoring combat movement for now.
     def _commit_combat(self):
         pass
