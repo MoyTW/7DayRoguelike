@@ -2,36 +2,27 @@ __author__ = 'Travis Moy'
 
 
 import pyglet
-from pyglet.window import key
 from tile import Tile
+from camera import Camera
+from level import Level
+
 
 t = Tile()
 t.load('testtile.txt')
 
 window = pyglet.window.Window()
-image = pyglet.resource.image('images/floor.png')
-
+level = Level()
+image = pyglet.resource.image('images/Frame268x268.png')
 sprite = pyglet.sprite.Sprite(image)
-sprite.scale = .5
 
-@window.event
-def on_key_press(symbol, modifiers):
-    if symbol == key.NUM_2:
-        sprite.y -= 64
-    elif symbol == key.NUM_6:
-        sprite.x += 64
-    elif symbol == key.NUM_8:
-        sprite.y += 64
-    elif symbol == key.NUM_4:
-        sprite.x -= 64
-    elif symbol == key.NUM_7:
-        sprite.rotation -= 45
-    elif symbol == key.NUM_9:
-        sprite.rotation += 45
+cam = Camera(level, (6, 6), (262, 262))
+cam.center_on(5, 9)
 
 @window.event
 def on_draw():
     window.clear()
+    Camera.batch.draw()
     sprite.draw()
+
 
 pyglet.app.run()

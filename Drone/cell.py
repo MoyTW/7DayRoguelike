@@ -6,7 +6,9 @@ from definitions import FOW
 
 
 class Cell:
-    def __init__(self, image=None, passable=True):
+    #image = pyglet.resource.image('images/boxydrone.png')
+
+    def __init__(self, image=pyglet.resource.image('images/boxydrone.png'), passable=True):
         self.passable = passable
         self.fow_state = FOW.VISIBLE
         self.image = image

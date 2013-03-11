@@ -8,10 +8,10 @@ class Tile:
     SIZE_ACROSS = 4
 
     def __init__(self):
-        self.cells = [[Cell for _ in range(32)] for _ in range(32)]
+        self.cells = [[Cell() for _ in range(self.SIZE_ACROSS)] for _ in range(self.SIZE_ACROSS)]
 
     def at(self, x, y):
-        pass
+        return self.cells[x][y]
 
     def load(self, file):
         f = open(file, 'r')
