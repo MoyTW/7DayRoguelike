@@ -1,0 +1,8 @@
+!SIZE!,4
+a,True,images/floor.png,[]
+b,False,images/wall.png,[]
+!MAP!
+b,a,b,b
+b,a,a,a
+a,a,a,b
+b,b,a,b

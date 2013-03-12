@@ -1,0 +1,35 @@
+Controls:
+
+IN-GAME:
+Free Look Mode: l
+Inventory Mode: i
+Use Consumable: u
+Pick Up Item(s) in square: g
+Equip Mode: q
+
+FREE LOOK MODE:
+Move camera: WER-SF-XCV
+End free look mode: l/Esc/Backspace
+
+INVENTORY MODE:
+Inspect Item Mode: (character)
+End Inventory Mode: Esc/Backspace
+
+INSPECT ITEM MODE:
+Use Item (if consumable): u
+Drop Item: d
+End Inspect Item Mode: Esc/Backspace
+
+EQUIP MODE:
+We'll cross this bridge when we get there.
+
+EXPLORATION MODE:
+Movement: WER-SF-XCV
+Salvage: Space
+
+COMBAT MODE:
+Target Next Enemy: t
+Strafe Movement: WER-SF-XCV
+Rotation: D+S, D+F
+Undo Last Movement Order: Esc/Backspace
+End Turn: Space/Enter

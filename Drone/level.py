@@ -60,4 +60,4 @@ class Level(object):
         warnings.warn("Function load() is a placeholder! It is hardcoded to load testtile.txt!")
         for row in range(0, self.TILES_ACROSS):
             for col in range(0, self.TILES_ACROSS):
-                self.tiles[row][col].load("testtile.txt")
+                self.tiles[row][col].load("tiles/testtile.txt")
