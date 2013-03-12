@@ -42,8 +42,6 @@ class Tile(object):
             line = lines[i].strip().split(',')
             cell_types[line[0]] = (line[1] == 'True', line[2])
 
-        print cell_types
-
         # For each line, break it into columns and create the appropriate Cell objects.
         # This is just confusing as heck. You will have to revisit this at some point.
         for row_offset in range(index_begin_map + 1, len(lines)):

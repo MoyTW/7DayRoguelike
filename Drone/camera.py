@@ -9,8 +9,8 @@ class Camera(object):
     IMAGE_ACROSS = 64
     batch = pyglet.graphics.Batch()
     cursor_image = pyglet.resource.image('images/camera_cursor.png')
+    center_tile = [0, 0]
 
-    _center_tile = [0, 0]
     _magnification = 1
     _num_rows = 0
     _num_cols = 0
@@ -23,21 +23,17 @@ class Camera(object):
         self.resize_view(lower_left, upper_right)
 
     def center_on(self, x, y):
-        self._center_tile = [x, y]
+        self.center_tile = [x, y]
         lower_left_index = (x - math.floor(self._num_rows / 2),
                             y - math.floor(self._num_cols / 2))
         for row in range(0, self._num_rows):
             for col in range(0, self._num_cols):
                 self._sprites[row][col] = self._get_sprite_at(lower_left_index, row, col)
-        print self._sprites
 
     def _get_sprite_at(self, lower_left_index, row, col):
         sprite_across = self.IMAGE_ACROSS * self._magnification
         cell = self.level.at(lower_left_index[0] + row,
                              lower_left_index[1] + col)
-
-        print "Cell at ({0}, {1}) is {2}".format(lower_left_index[0] + row, lower_left_index[1] + col, cell)
-
         sprite = None
         if cell is not None:
             sprite = pyglet.sprite.Sprite(
@@ -83,11 +79,11 @@ class Camera(object):
 
     def _step_cardinal(self, direction):
         if direction == DIR.N:
-            self._center_tile[1] += 1
+            self.center_tile[1] += 1
         elif direction == DIR.E:
-            self._center_tile[0] += 1
+            self.center_tile[0] += 1
         elif direction == DIR.S:
-            self._center_tile[1] -= 1
+            self.center_tile[1] -= 1
         elif direction == DIR.W:
-            self._center_tile[0] -= 1
-        self.center_on(self._center_tile[0], self._center_tile[1])
+            self.center_tile[0] -= 1
+        self.center_on(self.center_tile[0], self.center_tile[1])

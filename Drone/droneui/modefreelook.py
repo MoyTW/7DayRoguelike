@@ -11,39 +11,34 @@ class ModeFreeLook(UIMode):
     def __init__(self, mode_list, camera):
         super(ModeFreeLook, self).__init__(mode_list)
         self.camera = camera
-        self.reverse_moves = []
+        self.origin_position = None
         warnings.warn("ModeFreeLook.handle_keys() is not yet fully implemented!")
 
     def handle_keys(self, symbol, modifiers):
+        if self.origin_position is None:
+            self.origin_position = list(self.camera.center_tile)
+
         if symbol == key.ESCAPE or symbol == key.BACKSPACE:
-            self.reverse_moves = []
+            self.origin_position = None
             return self.mode_list.main_window()
-        elif symbol == key.W:
+        elif symbol == key.W or symbol == key.NUM_7:
             self.camera.step(DIR.NW)
-            self.reverse_moves.append(DIR.SE)
-        elif symbol == key.E:
+        elif symbol == key.E or symbol == key.NUM_8:
             self.camera.step(DIR.N)
-            self.reverse_moves.append(DIR.S)
-        elif symbol == key.R:
+        elif symbol == key.R or symbol == key.NUM_9:
             self.camera.step(DIR.NE)
-            self.reverse_moves.append(DIR.SW)
-        elif symbol == key.S:
+        elif symbol == key.S or symbol == key.NUM_4:
             self.camera.step(DIR.W)
-            self.reverse_moves.append(DIR.E)
-        elif symbol == key.F:
+        elif symbol == key.F or symbol == key.NUM_6:
             self.camera.step(DIR.E)
-            self.reverse_moves.append(DIR.W)
-        elif symbol == key.X:
+        elif symbol == key.X or symbol == key.NUM_1:
             self.camera.step(DIR.SW)
-            self.reverse_moves.append(DIR.NE)
-        elif symbol == key.C:
+        elif symbol == key.C or symbol == key.NUM_2:
             self.camera.step(DIR.S)
-            self.reverse_moves.append(DIR.N)
-        elif symbol == key.V:
+        elif symbol == key.V or symbol == key.NUM_3:
             self.camera.step(DIR.SE)
-            self.reverse_moves.append(DIR.NW)
-        elif symbol == key.D:
-            for dir in self.reverse_moves:
-                self.camera.step(dir)
-            self.reverse_moves = []
+        elif symbol == key.D or symbol == key.NUM_5:
+            if self.origin_position is not None:
+                self.camera.center_on(self.origin_position[0], self.origin_position[1])
+            self.origin_position = None
         return self
