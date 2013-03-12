@@ -1,8 +1,8 @@
 __author__ = 'Travis Moy'
 
+import warnings
 
 from cell import Cell
-import warnings
 
 
 class Tile(object):

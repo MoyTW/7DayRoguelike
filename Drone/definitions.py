@@ -4,6 +4,7 @@ from collections import namedtuple
 
 
 Position = namedtuple('Position', 'x y')
+StatBonus = namedtuple('StatBonus', 'value source')
 
 
 def enum(*sequential, **named):

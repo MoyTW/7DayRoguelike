@@ -2,11 +2,10 @@ __author__ = 'Travis Moy'
 
 
 import pyglet
-from definitions import DIR
-from pyglet.window import key
-from camera import Camera
-from level import Level
-from mobile import *
+from definitions import Position
+from droneui.camera import Camera
+from level.level import Level
+from entity.mobile import Mobile
 import droneui.uicontroller
 
 

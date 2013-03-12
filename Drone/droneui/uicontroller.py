@@ -21,3 +21,4 @@ class UIController(object):
                 # Else self.key_input_mode = CombatMode()
                 pass
 
+            return True

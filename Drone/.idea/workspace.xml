@@ -8,25 +8,25 @@
     <file path="/Level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362903264165" ignored="false" />
     <file path="/Tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362926429786" ignored="false" />
     <file path="/Entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362906443214" ignored="false" />
-    <file path="/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363079273778" ignored="false" />
+    <file path="/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363129438620" ignored="false" />
     <file path="/camera.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363080903629" ignored="false" />
-    <file path="/definitions.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363009679357" ignored="false" />
+    <file path="/definitions.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363128842688" ignored="false" />
     <file path="/cell.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008846365" ignored="false" />
-    <file path="/mobile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363012155113" ignored="false" />
+    <file path="/mobile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363129183362" ignored="false" />
     <file path="/tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363013210631" ignored="false" />
     <file path="/level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363080394995" ignored="false" />
     <file path="/testtile.txt" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363013346384" ignored="false" />
     <file path="/entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363031224167" ignored="false" />
     <file path="/uistate.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363057768343" ignored="false" />
     <file path="/keyinput.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363060647083" ignored="false" />
-    <file path="/__init__.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363060820089" ignored="false" />
+    <file path="/__init__.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363129414908" ignored="false" />
     <file path="/KeyInputMode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363060662034" ignored="false" />
     <file path="/keyinputmode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363061191100" ignored="false" />
     <file path="/explorationmode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363078292512" ignored="false" />
     <file path="/keyinputcontroller.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363079250269" ignored="false" />
     <file path="/mainwindowshared.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363078772788" ignored="false" />
     <file path="/mainwindowmode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363062494495" ignored="false" />
-    <file path="/modefreelook.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363081665201" ignored="false" />
+    <file path="/modefreelook.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363129301164" ignored="false" />
     <file path="/modeinventory.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363078224477" ignored="false" />
     <file path="/modeinspectitem.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363078204702" ignored="false" />
     <file path="/modeconsumable.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363078117332" ignored="false" />
@@ -34,6 +34,8 @@
     <file path="/modecombat.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363078012725" ignored="false" />
     <file path="/uimode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363077855015" ignored="false" />
     <file path="/uimodelist.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363079228085" ignored="false" />
+    <file path="/uicontroller.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363082043534" ignored="false" />
+    <file path="F:/aE-Education/pyglet/maths/AngleLearnings/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363126815502" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,24 +57,49 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="modefreelook.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/droneui/modefreelook.py">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/entity/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="48" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.9191919">
+            <state line="3" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="11" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#27#52#0" expanded="true" />
+                <element signature="e#27#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="camera.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/camera.py">
+      <file leaf-file-name="level.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level/level.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="27" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#27#40#0" expanded="true" />
-              </folding>
+            <state line="5" column="5" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tile.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/level/tile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="5" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="16" selection-start="125" selection-end="125" vertical-scroll-proportion="0.24242425">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,22 +114,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/keyinput/modemainwindow.py" />
-        <option value="$PROJECT_DIR$/droneui/uimode.py" />
-        <option value="$PROJECT_DIR$/droneui/modecombat.py" />
-        <option value="$PROJECT_DIR$/droneui/modeconsumable.py" />
-        <option value="$PROJECT_DIR$/droneui/modeequip.py" />
-        <option value="$PROJECT_DIR$/droneui/modeinspectitem.py" />
         <option value="$PROJECT_DIR$/droneui/modeinventory.py" />
         <option value="$PROJECT_DIR$/droneui/modeexploration.py" />
         <option value="$PROJECT_DIR$/droneui/modemainwindow.py" />
         <option value="$PROJECT_DIR$/droneui/uimodelist.py" />
-        <option value="$PROJECT_DIR$/droneui/uicontroller.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/level.py" />
         <option value="$PROJECT_DIR$/tile.py" />
         <option value="$PROJECT_DIR$/camera.py" />
+        <option value="$PROJECT_DIR$/droneui/uicontroller.py" />
+        <option value="$PROJECT_DIR$/definitions.py" />
+        <option value="$PROJECT_DIR$/entity/__init__.py" />
+        <option value="$PROJECT_DIR$/entity/mobile.py" />
         <option value="$PROJECT_DIR$/droneui/modefreelook.py" />
+        <option value="$PROJECT_DIR$/level/__init__.py" />
+        <option value="$PROJECT_DIR$/level/level.py" />
+        <option value="$PROJECT_DIR$/level/tile.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -181,7 +208,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="level" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -208,7 +263,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="F:/aE-Education/pyglet/pygletLearning" />
+    <property name="last_opened_file_path" value="F:/aE-Education/pyglet/maths" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
@@ -222,9 +277,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\aP-Personal_Projects\7DayRL\Drone\level" />
+      <recent name="F:\aP-Personal_Projects\7DayRL\Drone" />
+      <recent name="F:\aP-Personal_Projects\7DayRL\Drone\entity" />
+      <recent name="F:\aP-Personal_Projects\7DayRL\Drone\droneui" />
       <recent name="F:\aP-Personal_Projects\7DayRL\Drone\input" />
-      <recent name="F:\aP-Personal_Projects\7DayRL\Drone\tiles" />
-      <recent name="F:\aP-Personal_Projects\7DayRL\Drone\images" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -345,7 +402,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976446" sideWeight="0.67675674" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.110278375" sideWeight="0.67675674" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15952891" sideWeight="0.67675674" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -417,47 +474,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/droneui/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/uimode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="34" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/modecombat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="122" selection-end="208" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/modeconsumable.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="28" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/modeequip.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="97" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/droneui/modeinspectitem.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="29" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
@@ -503,55 +519,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/droneui/camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="18" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#28#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/uicontroller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="247" selection-end="247" vertical-scroll-proportion="0.23232323">
-          <folding>
-            <element signature="e#27#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="62" selection-start="1510" selection-end="1510" vertical-scroll-proportion="1.6565657">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="121" selection-end="121" vertical-scroll-proportion="-0.2020202">
-          <folding>
-            <element signature="e#28#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+        <state line="4" column="27" selection-start="80" selection-end="80" vertical-scroll-proportion="0.04040404">
           <folding>
             <element signature="e#27#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/droneui/uicontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/definitions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="56" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="20" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/mobile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="25" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/droneui/modefreelook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="48" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.9191919">
+        <state line="48" column="12" selection-start="1693" selection-end="1693" vertical-scroll-proportion="1.5252526">
           <folding>
             <element signature="e#27#52#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level/level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/level/tile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="5" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="125" selection-end="125" vertical-scroll-proportion="0.24242425">
+          <folding />
         </state>
       </provider>
     </entry>

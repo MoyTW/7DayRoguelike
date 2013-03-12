@@ -14,13 +14,19 @@ class ModeFreeLook(UIMode):
         self.origin_position = None
         warnings.warn("ModeFreeLook.handle_keys() is not yet fully implemented!")
 
+    def recenter(self):
+        if self.origin_position is not None:
+            self.camera.center_on(self.origin_position[0], self.origin_position[1])
+        self.origin_position = None
+
     def handle_keys(self, symbol, modifiers):
         if self.origin_position is None:
             self.origin_position = list(self.camera.center_tile)
 
         if symbol == key.ESCAPE or symbol == key.BACKSPACE:
-            self.origin_position = None
+            self.recenter()
             return self.mode_list.main_window()
+
         elif symbol == key.W or symbol == key.NUM_7:
             self.camera.step(DIR.NW)
         elif symbol == key.E or symbol == key.NUM_8:
@@ -37,8 +43,8 @@ class ModeFreeLook(UIMode):
             self.camera.step(DIR.S)
         elif symbol == key.V or symbol == key.NUM_3:
             self.camera.step(DIR.SE)
+
         elif symbol == key.D or symbol == key.NUM_5:
-            if self.origin_position is not None:
-                self.camera.center_on(self.origin_position[0], self.origin_position[1])
-            self.origin_position = None
+            self.recenter()
+
         return self

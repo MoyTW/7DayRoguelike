@@ -6,6 +6,9 @@ Inventory Mode: i
 Consumable Mode: u
 Pick Up Item(s) in square: g
 Equip Mode: q
+Module Mode: m
+?Stash Mode?
+?Fabrication Mode?
 
 FREE LOOK MODE:
 Move camera: WER-SF-XCV

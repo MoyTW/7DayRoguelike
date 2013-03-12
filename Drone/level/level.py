@@ -1,9 +1,9 @@
 __author__ = 'Travis Moy'
 
-
-from tile import Tile
 import math
 import warnings
+
+from tile import Tile
 
 
 class Level(object):
