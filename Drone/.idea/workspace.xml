@@ -8,7 +8,7 @@
     <file path="/Level.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362903264165" ignored="false" />
     <file path="/Tile.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362926429786" ignored="false" />
     <file path="/Entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1362906443214" ignored="false" />
-    <file path="/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363057585306" ignored="false" />
+    <file path="/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363061080944" ignored="false" />
     <file path="/camera.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008841417" ignored="false" />
     <file path="/definitions.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363009679357" ignored="false" />
     <file path="/cell.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363008846365" ignored="false" />
@@ -18,7 +18,20 @@
     <file path="/testtile.txt" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363013346384" ignored="false" />
     <file path="/entity.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363031224167" ignored="false" />
     <file path="/uistate.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363057768343" ignored="false" />
-    <file path="/keyinput.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363058483403" ignored="false" />
+    <file path="/keyinput.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363060647083" ignored="false" />
+    <file path="/__init__.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363060820089" ignored="false" />
+    <file path="/KeyInputMode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363060662034" ignored="false" />
+    <file path="/keyinputmode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363061191100" ignored="false" />
+    <file path="/explorationmode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063046777" ignored="false" />
+    <file path="/keyinputcontroller.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363062323090" ignored="false" />
+    <file path="/mainwindowshared.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063074467" ignored="false" />
+    <file path="/mainwindowmode.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363062494495" ignored="false" />
+    <file path="/modefreelook.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063211106" ignored="false" />
+    <file path="/modeinventory.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063271121" ignored="false" />
+    <file path="/modeinspectitem.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063291537" ignored="false" />
+    <file path="/modeconsumable.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063318900" ignored="false" />
+    <file path="/modeequip.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063338933" ignored="false" />
+    <file path="/modecombat.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363063380596" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,37 +52,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="10" selection-start="346" selection-end="346" vertical-scroll-proportion="0.24242425">
-              <folding>
-                <element signature="e#28#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="keyinput.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keyinput.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="definitions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/definitions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -79,21 +62,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Cell.py" />
-        <option value="$PROJECT_DIR$/Level.py" />
-        <option value="$PROJECT_DIR$/Tile.py" />
-        <option value="$PROJECT_DIR$/Entity.py" />
-        <option value="$PROJECT_DIR$/camera.py" />
-        <option value="$PROJECT_DIR$/cell.py" />
-        <option value="$PROJECT_DIR$/definitions.py" />
-        <option value="$PROJECT_DIR$/mobile.py" />
-        <option value="$PROJECT_DIR$/tile.py" />
-        <option value="$PROJECT_DIR$/testtile.txt" />
-        <option value="$PROJECT_DIR$/level.py" />
-        <option value="$PROJECT_DIR$/entity.py" />
-        <option value="$PROJECT_DIR$/uistate.py" />
-        <option value="$PROJECT_DIR$/keyinput.py" />
+        <option value="$PROJECT_DIR$/input/__init__.py" />
+        <option value="$PROJECT_DIR$/keyinput/__init__.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/keyinput/keyinputmode.py" />
+        <option value="$PROJECT_DIR$/keyinput/mainwindowshared.py" />
+        <option value="$PROJECT_DIR$/keyinput/mainwindowmode.py" />
+        <option value="$PROJECT_DIR$/keyinput/explorationmode.py" />
+        <option value="$PROJECT_DIR$/keyinput/keyinputcontroller.py" />
+        <option value="$PROJECT_DIR$/keyinput/modeexploration.py" />
+        <option value="$PROJECT_DIR$/keyinput/modemainwindow.py" />
+        <option value="$PROJECT_DIR$/keyinput/modefreelook.py" />
+        <option value="$PROJECT_DIR$/keyinput/modeinventory.py" />
+        <option value="$PROJECT_DIR$/keyinput/modeinspectitem.py" />
+        <option value="$PROJECT_DIR$/keyinput/modeconsumable.py" />
+        <option value="$PROJECT_DIR$/keyinput/modeequip.py" />
+        <option value="$PROJECT_DIR$/keyinput/modecombat.py" />
       </list>
     </option>
   </component>
@@ -172,6 +156,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="keyinput" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -199,6 +197,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\aP-Personal_Projects\7DayRL\Drone\input" />
       <recent name="F:\aP-Personal_Projects\7DayRL\Drone\tiles" />
       <recent name="F:\aP-Personal_Projects\7DayRL\Drone\images" />
     </key>
@@ -314,7 +313,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -325,7 +324,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911798" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32324323" sideWeight="0.9862816" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32324323" sideWeight="0.9862816" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -393,61 +392,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://Python/camera.Camera">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>camera.Camera</OriginalElement>
-          <nodes>
-            <node x="" y="">camera.Camera</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="44.0" y="17.0" />
-          <SelectedNodes />
-          <Categories />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="20" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/pyglet/window/win32/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="917" column="0" selection-start="33886" selection-end="33886" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/level.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="49" selection-start="2467" selection-end="2467" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#28#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tiles/testtile.txt">
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
@@ -479,23 +423,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/definitions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+        <state line="19" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.7676768">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyinput.py">
+    <entry file="file://$PROJECT_DIR$/keyinput/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="10" selection-start="346" selection-end="346" vertical-scroll-proportion="0.24242425">
+        <state line="23" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#28#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/keyinputmode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="4" selection-start="61" selection-end="235" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/keyinputcontroller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="259" selection-end="259" vertical-scroll-proportion="0.44444445">
+          <folding>
+            <element signature="e#27#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modeexploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="0" selection-end="566" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modefreelook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modeinventory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="297" selection-end="297" vertical-scroll-proportion="-9.6">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modeinspectitem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modeequip.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="289" selection-end="289" vertical-scroll-proportion="0.4848485">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modemainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="35" selection-start="149" selection-end="149" vertical-scroll-proportion="0.32323232">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modecombat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="25" selection-start="292" selection-end="292" vertical-scroll-proportion="0.4848485">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyinput/modeconsumable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="0" selection-end="375" vertical-scroll-proportion="0.24242425">
+          <folding>
+            <element signature="e#27#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

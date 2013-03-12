@@ -1,9 +1,9 @@
 Controls:
 
-IN-GAME:
+MAIN_WINDOW:
 Free Look Mode: l
 Inventory Mode: i
-Use Consumable: u
+Consumable Mode: u
 Pick Up Item(s) in square: g
 Equip Mode: q
 
@@ -20,6 +20,10 @@ Use Item (if consumable): u
 Drop Item: d
 End Inspect Item Mode: Esc/Backspace
 
+CONSUMABLE MODE:
+Use Consumable: (character)
+End Consumable Mode: Esc/Backspace
+
 EQUIP MODE:
 We'll cross this bridge when we get there.
 
@@ -30,6 +34,6 @@ Salvage: Space
 COMBAT MODE:
 Target Next Enemy: t
 Strafe Movement: WER-SF-XCV
-Rotation: D+S, D+F
+Rotation: Shift+S, Shift+F
 Undo Last Movement Order: Esc/Backspace
 End Turn: Space/Enter

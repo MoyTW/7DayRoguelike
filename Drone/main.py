@@ -7,6 +7,7 @@ from pyglet.window import key
 from camera import Camera
 from level import Level
 from mobile import *
+import keyinput.keyinputcontroller
 
 
 level = Level()
@@ -22,9 +23,11 @@ cam = Camera(level, (0, 0), (640, 480))
 cam.center_on(5, 9)
 
 window = pyglet.window.Window()
+controller = keyinput.keyinputcontroller.KeyInputController(window)
 
 look = False
 
+'''
 @window.event
 def on_key_press(symbol, modifiers):
     if symbol == key.NUM_2:
@@ -59,6 +62,7 @@ def on_key_press(symbol, modifiers):
         drone.queue_move(DIR.NW)
         drone.commit_moves()
         cam.step(DIR.NW)
+'''
 
 @window.event
 def on_draw():
