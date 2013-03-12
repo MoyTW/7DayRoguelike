@@ -29,11 +29,15 @@ class Camera(object):
         for row in range(0, self._num_rows):
             for col in range(0, self._num_cols):
                 self._sprites[row][col] = self._get_sprite_at(lower_left_index, row, col)
+        print self._sprites
 
     def _get_sprite_at(self, lower_left_index, row, col):
         sprite_across = self.IMAGE_ACROSS * self._magnification
         cell = self.level.at(lower_left_index[0] + row,
                              lower_left_index[1] + col)
+
+        print "Cell at ({0}, {1}) is {2}".format(lower_left_index[0] + row, lower_left_index[1] + col, cell)
+
         sprite = None
         if cell is not None:
             sprite = pyglet.sprite.Sprite(

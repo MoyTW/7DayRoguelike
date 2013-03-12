@@ -7,7 +7,7 @@ import warnings
 
 
 class Level(object):
-    TILES_ACROSS = 1
+    TILES_ACROSS = 2
 
     def __init__(self):
         self.all_entities = []
@@ -22,12 +22,15 @@ class Level(object):
             return None
 
     def tile_at(self, x, y):
-        try:
-            x_index = int(math.floor(x / Tile.SIZE_ACROSS))
-            y_index = int(math.floor(y / Tile.SIZE_ACROSS))
-            tile = self.tiles[x_index][y_index]
-            return tile
-        except IndexError:
+        if x >= 0 and y >= 0:
+            try:
+                x_index = int(math.floor(x / Tile.SIZE_ACROSS))
+                y_index = int(math.floor(y / Tile.SIZE_ACROSS))
+                tile = self.tiles[x_index][y_index]
+                return tile
+            except IndexError:
+                return None
+        else:
             return None
 
     def place_entity_at(self, entity, x, y):
