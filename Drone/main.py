@@ -7,7 +7,7 @@ from pyglet.window import key
 from camera import Camera
 from level import Level
 from mobile import *
-import keyinput.keyinputcontroller
+import droneui.uicontroller
 
 
 level = Level()
@@ -23,7 +23,7 @@ cam = Camera(level, (0, 0), (640, 480))
 cam.center_on(5, 9)
 
 window = pyglet.window.Window()
-controller = keyinput.keyinputcontroller.KeyInputController(window)
+controller = droneui.uicontroller.UIController(window)
 
 look = False
 
