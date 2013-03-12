@@ -7,7 +7,7 @@ import warnings
 
 
 class Level(object):
-    TILES_ACROSS = 4
+    TILES_ACROSS = 1
 
     def __init__(self):
         self.all_entities = []

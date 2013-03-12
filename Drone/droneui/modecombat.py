@@ -6,7 +6,8 @@ import warnings
 
 
 class ModeCombat(ModeMainWindow):
-    def __init__(self):
+    def __init__(self, mode_list):
+        super(ModeCombat, self).__init__(mode_list)
         warnings.warn("ModeCombat.handle_keys() is not yet fully implemented!")
 
     def handle_keys(self, symbol, modifiers):

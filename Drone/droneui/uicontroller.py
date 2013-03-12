@@ -1,15 +1,15 @@
 __author__ = 'Travis Moy'
 
-import pyglet
-from uimode import UIMode
 from modeexploration import ModeExploration
+from uimodelist import UIModeList
 
 
 class UIController(object):
 
-    def __init__(self, window):
+    def __init__(self, window, camera):
         self.window = window
-        self.key_input_mode = ModeExploration()
+        self.mode_list = UIModeList(camera)
+        self.key_input_mode = self.mode_list.exploration
 
         @self.window.event
         def on_key_press(symbol, modifiers):

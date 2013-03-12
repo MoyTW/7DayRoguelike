@@ -6,7 +6,8 @@ import warnings
 
 
 class ModeExploration(ModeMainWindow):
-    def __init__(self):
+    def __init__(self, mode_list):
+        super(ModeExploration, self).__init__(mode_list)
         warnings.warn("ModeExploration.handle_keys() is not yet fully implemented!")
 
     def handle_keys(self, symbol, modifiers):

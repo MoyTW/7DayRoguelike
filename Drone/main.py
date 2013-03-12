@@ -16,53 +16,16 @@ level.load(None)
 droneimage = pyglet.resource.image('images/boxydrone.png')
 drone = Mobile(droneimage, level)
 
-level.place_entity_at(drone, 5, 9)
-drone.current_cell = Position(5, 9)
+level.place_entity_at(drone, 1, 1)
+drone.current_cell = Position(1, 1)
 
 cam = Camera(level, (0, 0), (640, 480))
-cam.center_on(5, 9)
+cam.center_on(1, 1)
 
 window = pyglet.window.Window()
-controller = droneui.uicontroller.UIController(window)
+controller = droneui.uicontroller.UIController(window, cam)
 
 look = False
-
-'''
-@window.event
-def on_key_press(symbol, modifiers):
-    if symbol == key.NUM_2:
-        drone.queue_move(DIR.S)
-        drone.commit_moves()
-        cam.step(DIR.S)
-    elif symbol == key.NUM_6:
-        drone.queue_move(DIR.E)
-        drone.commit_moves()
-        cam.step(DIR.E)
-    elif symbol == key.NUM_8:
-        drone.queue_move(DIR.N)
-        drone.commit_moves()
-        cam.step(DIR.N)
-    elif symbol == key.NUM_4:
-        drone.queue_move(DIR.W)
-        drone.commit_moves()
-        cam.step(DIR.W)
-    elif symbol == key.NUM_9:
-        drone.queue_move(DIR.NE)
-        drone.commit_moves()
-        cam.step(DIR.NE)
-    elif symbol == key.NUM_3:
-        drone.queue_move(DIR.SE)
-        drone.commit_moves()
-        cam.step(DIR.SE)
-    elif symbol == key.NUM_1:
-        drone.queue_move(DIR.SW)
-        drone.commit_moves()
-        cam.step(DIR.SW)
-    elif symbol == key.NUM_7:
-        drone.queue_move(DIR.NW)
-        drone.commit_moves()
-        cam.step(DIR.NW)
-'''
 
 @window.event
 def on_draw():
