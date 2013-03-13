@@ -1,6 +1,7 @@
 __author__ = 'Travis Moy'
 
-from structureinternal import StructureInternal
+import warnings
+from entity.mobile.structureinternal import StructureInternal
 
 
 class StructureHardpoint(StructureInternal):
@@ -12,10 +13,12 @@ class StructureHardpoint(StructureInternal):
         self.fixed = fixed
 
     def mount(self, module):
-        pass
+        warnings.warn("StructureHardpoint.mount() is not complete!")
+        self.unmount()
+        self.contains = module
 
     def unmount(self):
-        pass
+        warnings.warn("StructureHardpoint.unmount is not complete!")
 
     def repair(self):
         pass

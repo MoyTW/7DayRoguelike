@@ -5,7 +5,7 @@ import pyglet
 from definitions import Position
 from droneui.camera import Camera
 from level.level import Level
-from entity.mobile import Mobile
+from entity.mobile.mobile import Mobile
 import droneui.uicontroller
 
 

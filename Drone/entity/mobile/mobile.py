@@ -2,7 +2,7 @@ __author__ = 'Travis Moy'
 
 import definitions
 from definitions import CMO, DIR, Position
-from entity import Entity
+from entity.entity import Entity
 
 
 default_combat_costs = {CMO.MOVE_FORWARD: 1, CMO.MOVE_BACKWARDS: 1.5,
@@ -55,10 +55,10 @@ class Mobile(Entity):
         self.movement_queue = []
 
     def alert(self):
-        self.alert = True
+        self._is_alerted = True
 
     def unalert(self):
-        self.alert = False
+        self._is_alerted = False
 
     def is_alerted(self):
         return self._is_alerted

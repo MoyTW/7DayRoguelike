@@ -1,8 +1,6 @@
 __author__ = 'Travis Moy'
 
 from modifiablestat import ModifiableStat
-from structureinternal import StructureInternal
-from structurehardpoint import StructureHardpoint
 
 
 class StructureSection(object):
