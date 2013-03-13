@@ -39,9 +39,9 @@ class Mobile(Entity):
 
     def queue_move(self, move):
         if not self.is_alerted():
-            self._queue_exploration(move)
+            return self._queue_exploration(move)
         else:
-            self._queue_combat(move)
+            return self._queue_combat(move)
 
     def unqueue_move(self):
         if self.movement_queue:
@@ -81,6 +81,9 @@ class Mobile(Entity):
         move_order = self._find_exploration_move_end_tile(move)
         if (not self.movement_queue) and move_order is not None:
             self.movement_queue.append(move_order)
+            return True
+        else:
+            return False
 
     def _queue_combat(self, move):
         move_order = self._find_combat_move_end_tile(move)
@@ -89,6 +92,9 @@ class Mobile(Entity):
                 self._movement_points >= self.combat_costs[move]:
             self.movement_points -= self.combat_costs[move]
             self.movement_queue.append(move_order)
+            return True
+        else:
+            return False
 
     def _commit_exploration(self):
         if self.movement_queue:

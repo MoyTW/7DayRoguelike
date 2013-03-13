@@ -22,7 +22,7 @@ cam = Camera(level, (0, 0), (640, 480))
 cam.center_on(1, 1)
 
 window = pyglet.window.Window()
-controller = droneui.uicontroller.UIController(window, cam)
+controller = droneui.uicontroller.UIController(window, drone, cam)
 
 look = False
 

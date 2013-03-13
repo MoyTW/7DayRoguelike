@@ -11,11 +11,11 @@ from modeinventory import ModeInventory
 
 
 class UIModeList(object):
-    def __init__(self, camera):
+    def __init__(self, drone, camera):
         self.combat = ModeCombat(self)
         self.consumable = ModeConsumable(self)
         self.equip = ModeEquip(self)
-        self.exploration = ModeExploration(self)
+        self.exploration = ModeExploration(self, drone, camera)
         self.freelook = ModeFreeLook(self, camera)
         self.inspectitem = ModeInspectItem(self)
         self.inventory = ModeInventory(self)

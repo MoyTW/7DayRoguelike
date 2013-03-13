@@ -6,9 +6,9 @@ from uimodelist import UIModeList
 
 class UIController(object):
 
-    def __init__(self, window, camera):
+    def __init__(self, window, drone, camera):
         self.window = window
-        self.mode_list = UIModeList(camera)
+        self.mode_list = UIModeList(drone, camera)
         self.key_input_mode = self.mode_list.exploration
 
         @self.window.event
