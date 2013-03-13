@@ -36,6 +36,12 @@
     <file path="/uimodelist.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363079228085" ignored="false" />
     <file path="/uicontroller.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363082043534" ignored="false" />
     <file path="F:/aE-Education/pyglet/maths/AngleLearnings/main.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363126815502" ignored="false" />
+    <file path="/structuresection.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363135919900" ignored="false" />
+    <file path="/structuremodel.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363130526265" ignored="false" />
+    <file path="/structurehardpoint.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363138116479" ignored="false" />
+    <file path="/ModifiableStat.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363132965454" ignored="false" />
+    <file path="/structureinternal.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363136198607" ignored="false" />
+    <file path="/_mobilemovement.py" changelist="11ec017b-cccb-4041-b394-790f2604069f" time="1363138485615" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,48 +63,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/entity/__init__.py">
+      <file leaf-file-name="structurehardpoint.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/entity/structurehardpoint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/level/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="11" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#27#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/level/level.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="5" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tile.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/level/tile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="5" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="16" selection-start="125" selection-end="125" vertical-scroll-proportion="0.24242425">
+            <state line="11" column="26" selection-start="368" selection-end="368" vertical-scroll-proportion="0.15151516">
               <folding />
             </state>
           </provider>
@@ -114,15 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/droneui/modeinventory.py" />
-        <option value="$PROJECT_DIR$/droneui/modeexploration.py" />
-        <option value="$PROJECT_DIR$/droneui/modemainwindow.py" />
-        <option value="$PROJECT_DIR$/droneui/uimodelist.py" />
-        <option value="$PROJECT_DIR$/level.py" />
-        <option value="$PROJECT_DIR$/tile.py" />
-        <option value="$PROJECT_DIR$/camera.py" />
-        <option value="$PROJECT_DIR$/droneui/uicontroller.py" />
-        <option value="$PROJECT_DIR$/definitions.py" />
         <option value="$PROJECT_DIR$/entity/__init__.py" />
         <option value="$PROJECT_DIR$/entity/mobile.py" />
         <option value="$PROJECT_DIR$/droneui/modefreelook.py" />
@@ -130,6 +89,15 @@
         <option value="$PROJECT_DIR$/level/level.py" />
         <option value="$PROJECT_DIR$/level/tile.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/entity/StructureModel.py" />
+        <option value="$PROJECT_DIR$/entity/StructureSection.py" />
+        <option value="$PROJECT_DIR$/entity/structuremodel.py" />
+        <option value="$PROJECT_DIR$/entity/ModifiableStat.py" />
+        <option value="$PROJECT_DIR$/entity/modifiablestat.py" />
+        <option value="$PROJECT_DIR$/entity/structureinternal.py" />
+        <option value="$PROJECT_DIR$/entity/structuresection.py" />
+        <option value="$PROJECT_DIR$/entity/structurehardpoint.py" />
+        <option value="$PROJECT_DIR$/entity/_mobilemovement.py" />
       </list>
     </option>
   </component>
@@ -474,60 +442,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/droneui/modeinspectitem.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="167" selection-end="167" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/modeinventory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/modeexploration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="106" selection-start="567" selection-end="567" vertical-scroll-proportion="0.6060606">
-          <folding>
-            <element signature="e#27#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/modemainwindow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="39" selection-start="884" selection-end="884" vertical-scroll-proportion="1.010101">
-          <folding>
-            <element signature="e#27#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/uimodelist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="344" selection-end="344" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/droneui/camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="80" selection-end="80" vertical-scroll-proportion="0.04040404">
-          <folding>
-            <element signature="e#27#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/droneui/uicontroller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="4" selection-start="741" selection-end="741" vertical-scroll-proportion="0.0">
@@ -541,22 +455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="56" selection-start="600" selection-end="600" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/entity.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="20" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/entity/mobile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -585,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/level/level.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/level/tile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="5" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
@@ -599,9 +490,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/level/level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="61" selection-end="61" vertical-scroll-proportion="0.2020202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/structuremodel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/modifiablestat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/structureinternal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="30" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/structuresection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#27#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="125" selection-end="125" vertical-scroll-proportion="0.24242425">
+        <state line="7" column="16" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/entity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="26" selection-start="292" selection-end="292" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/mobile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="91" selection-start="939" selection-end="939" vertical-scroll-proportion="0.36363637">
+          <folding>
+            <element signature="e#27#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/_mobilemovement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/entity/structurehardpoint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="26" selection-start="368" selection-end="368" vertical-scroll-proportion="0.15151516">
           <folding />
         </state>
       </provider>
