@@ -11,7 +11,7 @@ class ModeInventory(UIMode):
         super(ModeInventory, self).__init__(mode_list)
         warnings.warn("ModeInventory.handle_keys() is not yet fully implemented!")
 
-    def handle_keys(self, symbol, modifiers):
+    def handle_keys(self, symbol, modifiers, previous_mode):
         if modifiers & key.MOD_SHIFT and key.A <= symbol <= key.Z:
             print "{0} was pressed! (Should be uppercase)".format(key.symbol_string(symbol))
         elif key.A <= symbol <= key.Z:

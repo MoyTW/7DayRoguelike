@@ -6,7 +6,7 @@ class UIMode(object):
     def __init__(self, mode_list):
         self.mode_list = mode_list
 
-    def handle_keys(self, symbol, modifiers):
+    def handle_keys(self, symbol, modifiers, previous_mode):
         print "The parent KeyInputMode was called! This should never occur - something has gone horribly wrong!"
         return self
 

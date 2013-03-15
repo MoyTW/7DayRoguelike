@@ -14,8 +14,8 @@ class ModeExploration(ModeMainWindow):
         self.camera = camera
         warnings.warn("ModeExploration.handle_keys() is not yet fully implemented!")
 
-    def handle_keys(self, symbol, modifiers):
-        next_mode = super(ModeExploration, self).handle_keys(symbol, modifiers)
+    def handle_keys(self, symbol, modifiers, previous_mode):
+        next_mode = super(ModeExploration, self).handle_keys(symbol, modifiers, None)
         if next_mode is None:
             self.exploration_handle_keys(symbol, modifiers)
             return self

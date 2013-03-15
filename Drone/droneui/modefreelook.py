@@ -19,13 +19,13 @@ class ModeFreeLook(UIMode):
             self.camera.center_on(self.origin_position[0], self.origin_position[1])
         self.origin_position = None
 
-    def handle_keys(self, symbol, modifiers):
+    def handle_keys(self, symbol, modifiers, previous_mode):
         if self.origin_position is None:
             self.origin_position = list(self.camera.center_tile)
 
         if symbol == key.ESCAPE or symbol == key.BACKSPACE:
             self.recenter()
-            return self.mode_list.main_window()
+            return previous_mode
 
         elif symbol == key.W or symbol == key.NUM_7:
             self.camera.step(DIR.NW)

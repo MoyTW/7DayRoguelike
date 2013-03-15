@@ -10,6 +10,6 @@ class ModeEquip(UIMode):
         super(ModeEquip, self).__init__(mode_list)
         warnings.warn("ModeEquip.handle_keys() is not yet fully implemented!")
 
-    def handle_keys(self, symbol, modifiers):
+    def handle_keys(self, symbol, modifiers, previous_mode):
         print "ModeEquip.handle_keys() was called with {0}".format(symbol)
         return self

@@ -11,7 +11,7 @@ class ModeMainWindow(UIMode):
         super(ModeMainWindow, self).__init__(mode_list)
         warnings.warn("ModeMainWindow is not yet fully implemented!")
 
-    def handle_keys(self, symbol, modifiers):
+    def handle_keys(self, symbol, modifiers, previous_mode):
         warnings.warn("ModeMainWindow.handle_keys() is not yet fully implemented")
         if symbol == key.L:
             return self.mode_list.freelook

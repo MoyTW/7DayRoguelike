@@ -11,6 +11,7 @@ class UIController(object):
         self.camera = droneui.camera.Camera(level, (0, 0), (self.window.width, self.window.height))
         self.mode_list = UIModeList(drone, self.camera)
         self.key_input_mode = self.mode_list.exploration
+        self.previous_mode = None
 
         self._setup_callbacks()
 
@@ -20,7 +21,12 @@ class UIController(object):
     def _setup_callbacks(self):
         @self.window.event
         def on_key_press(symbol, modifiers):
-            self.key_input_mode = self.key_input_mode.handle_keys(symbol, modifiers)
+            new_mode = self.key_input_mode.handle_keys(symbol, modifiers, self.previous_mode)
+            if self.previous_mode != self.key_input_mode and self.key_input_mode != new_mode:
+                print "Changing previous_mode from {0} to {1}".format(self.previous_mode, self.key_input_mode)
+                self.previous_mode = self.key_input_mode
+            self.key_input_mode = new_mode
+
             if self.key_input_mode is None:
                 # Commit the turn
                 # Get the Alerted status
