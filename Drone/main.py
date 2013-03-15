@@ -4,7 +4,7 @@ __author__ = 'Travis Moy'
 import pyglet
 from definitions import Position
 from level.level import Level
-from entity.mobile.mobile import Mobile
+from player.playerdrone import PlayerDrone
 import droneui.uicontroller
 from entity.entity import Entity
 from entity.portable.module.module import Module
@@ -21,8 +21,7 @@ level.place_entity_at(ent, 2, 2)
 mod = Module()
 level.place_entity_at(mod, 1, 3)
 
-droneimage = pyglet.resource.image('images/boxydrone.png')
-drone = Mobile(droneimage, level)
+drone = PlayerDrone(level)
 
 level.place_entity_at(drone, 1, 1)
 drone.current_cell = Position(1, 1)

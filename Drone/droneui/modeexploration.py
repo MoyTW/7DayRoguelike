@@ -58,3 +58,6 @@ class ModeExploration(ModeMainWindow):
             if self.player_drone.queue_move(DIR.SE):
                 self.player_drone.commit_moves()
                 self.camera.step(DIR.SE)
+        elif symbol == key.SPACE:
+            print "SPACE SHOULD MAKE YOU GET THE ITEM(S) IN THE SQUARE BUT DOES NOT!"
+            #self.player_drone.pickup_item()

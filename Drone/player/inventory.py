@@ -36,6 +36,12 @@ class Inventory(object):
         self._item_dict = {}
         self._init_dictionary()
 
+    def add_item(self, item):
+        print "NYI"
+
+    def remove_item(self, item):
+        print "NYI"
+
     def search_items_for(self, query):
         pass
 
@@ -65,4 +71,4 @@ class Inventory(object):
             else:
                 page = 0
             index = IndexPair(self._letter_set[i % len(self._letter_set)], page)
-            self._item_dict[index] = Entity()
+            self._item_dict[index] = None
