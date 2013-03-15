@@ -11,8 +11,6 @@ from entity.portable.module.module import Module
 from player.inventory import Inventory
 
 
-inventory = Inventory(52, 100)
-
 level = Level()
 level.load(None)
 
@@ -27,7 +25,7 @@ level.place_entity_at(drone, 1, 1)
 drone.current_cell = Position(1, 1)
 
 window = pyglet.window.Window(width=1024, height=768)
-controller = droneui.uicontroller.UIController(window, drone, level, inventory)
+controller = droneui.uicontroller.UIController(window, drone, level)
 controller.center_on(1, 1)
 
 look = False

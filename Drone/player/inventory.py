@@ -53,11 +53,16 @@ class Inventory(object):
     def add_item(self, item):
         if item is None:
             return
-        try:
-            key = (key for key, value in self._item_dict.items() if value is None).next()
-        except StopIteration:
-            return False
-        self._item_dict[key] = item
+
+        keys = self._item_dict.keys()
+        keys.sort()
+        for key in keys:
+            if self._item_dict[key] is None:
+                self._item_dict[key] = item
+                print "Should have inserted {0} into {1}".format(item, key)
+                return True
+
+        return False
 
     def remove_item(self, item):
         try:

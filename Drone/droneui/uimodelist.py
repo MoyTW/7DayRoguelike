@@ -11,7 +11,8 @@ from modeinventory import ModeInventory
 
 
 class UIModeList(object):
-    def __init__(self, window, drone, camera, inventory, level):
+    def __init__(self, window, drone, camera, level):
+        inventory = drone.inventory
         self.combat = ModeCombat(self)
         self.consumable = ModeConsumable(self)
         self.equip = ModeEquip(self)
