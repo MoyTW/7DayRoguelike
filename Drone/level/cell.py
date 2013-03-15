@@ -8,7 +8,7 @@ import warnings
 
 class Cell(object):
 
-    def __init__(self, image_file='images/defaultcell.png',
+    def __init__(self, image_file='images/defaults/defaultcell.png',
                  passable=True, fow_state=FOW.VISIBLE):
         self.passable = passable
         self.fow_state = fow_state
