@@ -64,11 +64,13 @@ class ModeExploration(ModeMainWindow):
                 self.player_drone.commit_moves()
                 self.camera.step(DIR.SE)
         elif symbol == key.SPACE:
-            print "SPACE WAS PRESSED!"
+            if self.player_drone.inventory.is_full():
+                print "You cannot get anything! Your inventory is full!"
+                return self
             cell = self.level.at(self.player_drone.current_cell.x, self.player_drone.current_cell.y)
             list_without_drone = list(cell.contains)
             list_without_drone.remove(self.player_drone)
             inventory = Inventory(contains=list_without_drone)
-            return ModeGetItem(self.window, inventory, self.player_drone.current_cell)
+            return ModeGetItem(self.window, inventory, self.player_drone)
 
         return self

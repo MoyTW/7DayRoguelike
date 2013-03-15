@@ -12,9 +12,12 @@ class PlayerDrone(Mobile):
         self.inventory = inventory.Inventory(52, 400)
 
     def pickup_item(self, item):
+        if item is None:
+            return False
         cell = self.level.at(self.current_cell.x, self.current_cell.y)
         cell.contains.remove(item)
         self.inventory.add_item(item)
+        return True
 
     def drop_item(self, item):
         cell = self.level.at(self.current_cell.x, self.current_cell.y)

@@ -8,11 +8,12 @@ from pyglet.window import key
 
 # This is a disposable Mode!
 class ModeGetItem(UIMode):
-    def __init__(self, window, inventory, position):
+    def __init__(self, window, inventory, player_drone):
         print "ModeGetItem was constructed!"
         self.window = window
         self.inventory = inventory
-        self.position = position
+        self.player_drone = player_drone
+        self.position = player_drone.current_cell
 
         self._current_page = 0
         self._labels = []
@@ -22,7 +23,9 @@ class ModeGetItem(UIMode):
 
     def handle_keys(self, symbol, modifiers, previous_mode):
         if key.A <= symbol <= key.Z:
-            print "{0} was pressed! (Should be lowercase)".format(key.symbol_string(symbol).lower())
+            item = self.inventory.get_item(key.symbol_string(symbol).lower(), self._current_page)
+            if self.player_drone.pickup_item(item):
+                return previous_mode
         elif symbol == key.COMMA:
             if self._current_page > 0:
                 self._current_page -= 1

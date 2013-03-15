@@ -23,6 +23,9 @@ class IndexPair(object):
         else:
             return self.key < other.key
 
+    def __hash__(self):
+        return self.page * 100 + ord(self.key)
+
     def __repr__(self):
         return "({0}, p={1})".format(self.key, self.page)
 
@@ -40,7 +43,16 @@ class Inventory(object):
         self._item_dict = {}
         self._init_dictionary(contains)
 
+    def is_full(self):
+        try:
+            (key for key, value in self._item_dict.items() if value is None).next()
+            return False
+        except StopIteration:
+            return True
+
     def add_item(self, item):
+        if item is None:
+            return
         try:
             key = (key for key, value in self._item_dict.items() if value is None).next()
         except StopIteration:
@@ -75,7 +87,10 @@ class Inventory(object):
         return pair_list
 
     def get_item(self, key, page):
-        return self._item_dict.get(IndexPair(key, page))
+        pair = IndexPair(key, page)
+        print pair
+        print self._item_dict
+        return self._item_dict.get(pair)
 
     def _init_dictionary(self, contains):
         for i in range(0, self.max_items):

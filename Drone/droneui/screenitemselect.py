@@ -8,7 +8,7 @@ def create_sprites_and_labels(labels, sprites, batch, current_page, inventory):
     del sprites[:]
 
     labels.append(pyglet.text.Label(
-        'Page {0} of {1}'.format(current_page, inventory.num_pages - 1),
+        'Page {0} of {1}'.format(current_page + 1, inventory.num_pages),
         font_size=14, x=648, y=20))
 
     inventory_list = inventory.get_keys_and_entities_on_page(current_page)
