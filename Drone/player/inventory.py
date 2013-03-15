@@ -1,5 +1,6 @@
 __author__ = 'Travis Moy'
 
+import sys
 import functools
 import string
 from entity.entity import Entity
@@ -28,13 +29,16 @@ class IndexPair(object):
 
 class Inventory(object):
 
-    def __init__(self, max_items, max_weight):
+    def __init__(self, max_items=0, max_weight=sys.maxint, contains=None):
         self._letter_set = string.ascii_lowercase
-        self.max_items = max_items
+        if contains is not None:
+            self.max_items = len(contains)
+        else:
+            self.max_items = max_items
         self.max_weight = max_weight
         self.num_pages = max_items // len(self._letter_set)
         self._item_dict = {}
-        self._init_dictionary()
+        self._init_dictionary(contains)
 
     def add_item(self, item):
         try:
@@ -73,11 +77,14 @@ class Inventory(object):
     def get_item(self, key, page):
         return self._item_dict.get(IndexPair(key, page))
 
-    def _init_dictionary(self):
+    def _init_dictionary(self, contains):
         for i in range(0, self.max_items):
             if i > 0:
                 page = i // len(self._letter_set)
             else:
                 page = 0
             index = IndexPair(self._letter_set[i % len(self._letter_set)], page)
-            self._item_dict[index] = None
+            if contains is not None:
+                self._item_dict[index] = contains[i]
+            else:
+                self._item_dict[index] = None

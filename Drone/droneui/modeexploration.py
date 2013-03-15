@@ -3,22 +3,27 @@ __author__ = 'Travis Moy'
 from definitions import DIR
 from modemainwindow import ModeMainWindow
 from pyglet.window import key
+from modegetitem import ModeGetItem
+from player.inventory import Inventory
 
 import warnings
 
 
 class ModeExploration(ModeMainWindow):
-    def __init__(self, mode_list, player_drone, camera):
+    def __init__(self, mode_list, player_drone, camera, window, level):
         super(ModeExploration, self).__init__(mode_list)
         self.player_drone = player_drone
         self.camera = camera
+        self.window = window
+        self.level = level
         warnings.warn("ModeExploration.handle_keys() is not yet fully implemented!")
 
     def handle_keys(self, symbol, modifiers, previous_mode):
         next_mode = super(ModeExploration, self).handle_keys(symbol, modifiers, None)
         if next_mode is None:
-            self.exploration_handle_keys(symbol, modifiers)
-            return self
+            return self.exploration_handle_keys(symbol, modifiers)
+            #return self
+            #return self.exploration_handle_keys(symbol, modifiers)
         else:
             return next_mode
 
@@ -59,5 +64,11 @@ class ModeExploration(ModeMainWindow):
                 self.player_drone.commit_moves()
                 self.camera.step(DIR.SE)
         elif symbol == key.SPACE:
-            print "SPACE SHOULD MAKE YOU GET THE ITEM(S) IN THE SQUARE BUT DOES NOT!"
-            #self.player_drone.pickup_item()
+            print "SPACE WAS PRESSED!"
+            cell = self.level.at(self.player_drone.current_cell.x, self.player_drone.current_cell.y)
+            list_without_drone = list(cell.contains)
+            list_without_drone.remove(self.player_drone)
+            inventory = Inventory(contains=list_without_drone)
+            return ModeGetItem(self.window, inventory, self.player_drone.current_cell)
+
+        return self
