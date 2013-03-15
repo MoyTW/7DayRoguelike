@@ -37,10 +37,19 @@ class Inventory(object):
         self._init_dictionary()
 
     def add_item(self, item):
-        print "NYI"
+        try:
+            key = (key for key, value in self._item_dict.items() if value is None).next()
+        except StopIteration:
+            return False
+        self._item_dict[key] = item
 
     def remove_item(self, item):
-        print "NYI"
+        try:
+            key = (key for key, value in self._item_dict.items() if value is item).next()
+        except StopIteration:
+            print "remove_item({0}) failed! Item was not in the map!".format(item)
+            return False
+        self._item_dict[key] = None
 
     def search_items_for(self, query):
         pass
