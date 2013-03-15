@@ -3,46 +3,64 @@ __author__ = 'Travis Moy'
 import pyglet
 import math
 from definitions import DIR
+from collections import namedtuple
+
+ImagePair = namedtuple("ImagePair", "cell, entity")
 
 
 class Camera(object):
     IMAGE_ACROSS = 64
-    batch = pyglet.graphics.Batch()
     cursor_image = pyglet.resource.image('images/camera_cursor.png')
     center_tile = [0, 0]
 
+    _entity_batch = pyglet.graphics.Batch()
+    _cell_batch = pyglet.graphics.Batch()
     _magnification = 1
-    _num_rows = 0
-    _num_cols = 0
-    _lower_left_pixel = (0, 0)
-    _sprites = []
 
     def __init__(self, level, lower_left=(0, 0), upper_right=(200, 100)):
         self.cursor = pyglet.sprite.Sprite(self.cursor_image)
         self.level = level
         self.resize_view(lower_left, upper_right)
 
+    def draw(self):
+        self._cell_batch.draw()
+        self._entity_batch.draw()
+        self.cursor.draw()
+
     def center_on(self, x, y):
         self.center_tile = [x, y]
         lower_left_index = (x - math.floor(self._num_rows / 2),
                             y - math.floor(self._num_cols / 2))
+
+        self._entity_sprites = []
+
         for row in range(0, self._num_rows):
             for col in range(0, self._num_cols):
-                self._sprites[row][col] = self._get_sprite_at(lower_left_index, row, col)
+                pair = self._get_ImagePair_at(lower_left_index, row, col)
+                self._sprites[row][col] = pair.cell
+                self._entity_sprites.append(pair.entity)
 
-    def _get_sprite_at(self, lower_left_index, row, col):
+    def _get_ImagePair_at(self, lower_left_index, row, col):
         sprite_across = self.IMAGE_ACROSS * self._magnification
         cell = self.level.at(lower_left_index[0] + row,
                              lower_left_index[1] + col)
-        sprite = None
+        cell_sprite = None
+        entity_sprite = None
         if cell is not None:
-            sprite = pyglet.sprite.Sprite(
-                cell.get_image(),
+            cell_sprite = pyglet.sprite.Sprite(
+                cell.get_cell_image(),
                 x=self._lower_left_pixel[0] + row * sprite_across,
                 y=self._lower_left_pixel[1] + col * sprite_across,
-                batch=self.batch
+                batch=self._cell_batch
             )
-        return sprite
+            if cell.get_entity_image() is not None:
+                entity_sprite = pyglet.sprite.Sprite(
+                    cell.get_entity_image(),
+                    x=self._lower_left_pixel[0] + row * sprite_across,
+                    y=self._lower_left_pixel[1] + col * sprite_across,
+                    batch=self._entity_batch
+                )
+        return ImagePair(cell_sprite, entity_sprite)
 
     def step(self, direction):
         if direction == DIR.N or direction == DIR.E or direction == DIR.S or direction == DIR.W:

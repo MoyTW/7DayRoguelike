@@ -9,7 +9,7 @@ class UIController(object):
 
     def __init__(self, window, drone, level):
         self.window = window
-        self.camera = droneui.camera.Camera(level, (0, 0), (640, 480))
+        self.camera = droneui.camera.Camera(level, (0, 0), (self.window.width, self.window.height))
         self.mode_list = UIModeList(drone, self.camera)
         self.key_input_mode = self.mode_list.exploration
 
@@ -34,5 +34,4 @@ class UIController(object):
         @self.window.event
         def on_draw():
             self.window.clear()
-            self.camera.batch.draw()
-            self.camera.cursor.draw()
+            self.camera.draw()
