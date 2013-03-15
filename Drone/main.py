@@ -3,13 +3,15 @@ __author__ = 'Travis Moy'
 
 import pyglet
 from definitions import Position
-from droneui.camera import Camera
 from level.level import Level
 from entity.mobile.mobile import Mobile
 import droneui.uicontroller
 from entity.entity import Entity
 from entity.portable.module.module import Module
+from player.inventory import Inventory
 
+
+inventory = Inventory(153, 100)
 
 level = Level()
 level.load(None)
@@ -30,5 +32,6 @@ controller = droneui.uicontroller.UIController(window, drone, level)
 controller.center_on(1, 1)
 
 look = False
+
 
 pyglet.app.run()

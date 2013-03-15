@@ -1,6 +1,5 @@
 __author__ = 'Travis Moy'
 
-from modeexploration import ModeExploration
 from uimodelist import UIModeList
 import droneui
 
