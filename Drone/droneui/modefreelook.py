@@ -48,3 +48,6 @@ class ModeFreeLook(UIMode):
             self.recenter()
 
         return self
+
+    def draw(self):
+        self.camera.draw()

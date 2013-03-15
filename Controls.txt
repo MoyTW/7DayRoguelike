@@ -16,6 +16,8 @@ End free look mode: l/Esc/Backspace
 
 INVENTORY MODE:
 Inspect Item Mode: (character)
+Next Page: ,/<
+Previous Page: ./>
 End Inventory Mode: Esc/Backspace
 
 INSPECT ITEM MODE:

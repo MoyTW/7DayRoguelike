@@ -1,8 +1,8 @@
 __author__ = 'Travis Moy'
 
 import functools
-import math
 import string
+from entity.entity import Entity
 
 
 @functools.total_ordering
@@ -17,6 +17,8 @@ class IndexPair(object):
     def __lt__(self, other):
         if self.page < other.page:
             return True
+        elif self.page > other.page:
+            return False
         else:
             return self.key < other.key
 
@@ -27,21 +29,40 @@ class IndexPair(object):
 class Inventory(object):
 
     def __init__(self, max_items, max_weight):
+        self._letter_set = string.ascii_lowercase
         self.max_items = max_items
         self.max_weight = max_weight
-        self.item_dict = {}
+        self.num_pages = max_items // len(self._letter_set)
+        self._item_dict = {}
         self._init_dictionary()
 
     def search_items_for(self, query):
         pass
 
-    #def get_item(self, ):
+    def get_keys_and_entities_on_page(self, page):
+        pair_list = []
+        keys = self._item_dict.keys()
+        keys.sort()
+        offset = page * len(self._letter_set)
+
+        # This would be more elegant with a lesser_of(x, y) function.
+        last = (page + 1) * len(self._letter_set)
+        if self.max_items < last:
+            last = self.max_items
+
+        for i in range(offset, last):
+            pair_list.append((keys[i].key, self._item_dict.get(keys[i])))
+
+        return pair_list
+
+    def get_item(self, key, page):
+        return self._item_dict.get(IndexPair(key, page))
 
     def _init_dictionary(self):
         for i in range(0, self.max_items):
             if i > 0:
-                page = i / len(string.ascii_letters)
+                page = i // len(self._letter_set)
             else:
                 page = 0
-            index = IndexPair(string.ascii_letters[i % len(string.ascii_letters)], page)
-            self.item_dict[index] = None
+            index = IndexPair(self._letter_set[i % len(self._letter_set)], page)
+            self._item_dict[index] = Entity()

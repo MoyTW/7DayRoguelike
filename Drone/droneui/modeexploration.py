@@ -22,6 +22,9 @@ class ModeExploration(ModeMainWindow):
         else:
             return next_mode
 
+    def draw(self):
+        self.camera.draw()
+
     def exploration_handle_keys(self, symbol, modifiers):
         if symbol == key.W or symbol == key.NUM_7:
             if self.player_drone.queue_move(DIR.NW):
