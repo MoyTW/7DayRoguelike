@@ -61,6 +61,8 @@ class ModeExploration(ModeMainWindow):
             if self.player_drone.queue_move(DIR.SE):
                 self.player_drone.commit_moves()
                 self.camera.step(DIR.SE)
+        elif symbol == key.D or symbol == key.NUM_5:
+            print "This should open the drop item menu."
         elif symbol == key.SPACE:
             if self.player_drone.inventory.is_full():
                 print "You cannot get anything! Your inventory is full!"
@@ -70,8 +72,11 @@ class ModeExploration(ModeMainWindow):
             list_without_drone = list(cell.contains)
             list_without_drone.remove(self.player_drone)
 
-            inventory = Inventory(contains=list_without_drone)
-
-            return self.factory_modes.create_GetItem(inventory)
+            if len(list_without_drone) == 1:
+                self.player_drone.pickup_item(list_without_drone[0])
+                return self
+            else:
+                inventory = Inventory(contains=list_without_drone)
+                return self.factory_modes.create_GetItem(inventory)
 
         return self
