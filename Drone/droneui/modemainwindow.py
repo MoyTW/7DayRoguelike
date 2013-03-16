@@ -7,22 +7,22 @@ import warnings
 
 
 class ModeMainWindow(UIMode):
-    def __init__(self, mode_list):
-        super(ModeMainWindow, self).__init__(mode_list)
+    def __init__(self, factory_modes):
+        super(ModeMainWindow, self).__init__(factory_modes)
         warnings.warn("ModeMainWindow is not yet fully implemented!")
 
     def handle_keys(self, symbol, modifiers, previous_mode):
         warnings.warn("ModeMainWindow.handle_keys() is not yet fully implemented")
         if symbol == key.L:
-            return self.mode_list.freelook
+            return self.factory_modes.create_FreeLook()
         elif symbol == key.I:
-            return self.mode_list.inventory
+            return self.factory_modes.create_Inventory()
         elif symbol == key.U:
-            return self.mode_list.consumable
+            return self.factory_modes.create_Consumable()
         elif symbol == key.G:
             # warnings.warn("key.G in ModeMainWindow.handle_keys is not fully implemented!")
-            return self.mode_list.main_window()
+            return self.factory_modes.create_MainWindow()
         elif symbol == key.Q:
-            return self.mode_list.equip
+            return self.factory_modes.create_Equip()
         else:
             return None

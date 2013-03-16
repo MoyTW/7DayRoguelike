@@ -9,8 +9,8 @@ import warnings
 
 
 class ModeInventory(UIMode):
-    def __init__(self, mode_list, window, inventory):
-        super(ModeInventory, self).__init__(mode_list)
+    def __init__(self, factory_modes, window, inventory):
+        super(ModeInventory, self).__init__(factory_modes)
         self.window = window
         self.inventory = inventory
 
@@ -34,7 +34,7 @@ class ModeInventory(UIMode):
                 self._current_page += 1
         elif symbol == key.ESCAPE or symbol == key.BACKSPACE:
             self._current_page = 0
-            return self.mode_list.main_window()
+            return self.factory_modes.create_MainWindow()
         return self
 
     def draw(self):

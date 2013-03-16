@@ -3,8 +3,8 @@ __author__ = 'Travis Moy'
 
 class UIMode(object):
 
-    def __init__(self, mode_list):
-        self.mode_list = mode_list
+    def __init__(self, factory_modes):
+        self.factory_modes = factory_modes
 
     def handle_keys(self, symbol, modifiers, previous_mode):
         print "The parent KeyInputMode was called! This should never occur - something has gone horribly wrong!"

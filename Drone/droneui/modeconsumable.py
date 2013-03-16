@@ -6,8 +6,8 @@ import warnings
 
 
 class ModeConsumable(UIMode):
-    def __init__(self, mode_list):
-        super(ModeConsumable, self).__init__(mode_list)
+    def __init__(self, factory_modes):
+        super(ModeConsumable, self).__init__(factory_modes)
         warnings.warn("ModeConsumable.handle_keys() is not yet fully implemented!")
 
     def handle_keys(self, symbol, modifiers, previous_mode):

@@ -1,6 +1,6 @@
 __author__ = 'Travis Moy'
 
-from uimodelist import UIModeList
+from factorymodes import FactoryModes
 import droneui
 
 
@@ -9,8 +9,8 @@ class UIController(object):
     def __init__(self, window, drone, level):
         self.window = window
         self.camera = droneui.camera.Camera(level, (0, 0), (self.window.width, self.window.height))
-        self.mode_list = UIModeList(window, drone, self.camera, level)
-        self.key_input_mode = self.mode_list.exploration
+        self.factory_modes = FactoryModes(window, drone, self.camera, level)
+        self.key_input_mode = self.factory_modes.create_Exploration()
         self.previous_mode = None
 
         self._setup_callbacks()

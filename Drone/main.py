@@ -8,7 +8,6 @@ from player.playerdrone import PlayerDrone
 import droneui.uicontroller
 from entity.entity import Entity
 from entity.portable.module.module import Module
-from player.inventory import Inventory
 
 
 level = Level()

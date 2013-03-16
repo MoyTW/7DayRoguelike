@@ -8,8 +8,8 @@ import warnings
 
 
 class ModeFreeLook(UIMode):
-    def __init__(self, mode_list, camera):
-        super(ModeFreeLook, self).__init__(mode_list)
+    def __init__(self, factory_modes, camera):
+        super(ModeFreeLook, self).__init__(factory_modes)
         self.camera = camera
         self.origin_position = None
         warnings.warn("ModeFreeLook.handle_keys() is not yet fully implemented!")

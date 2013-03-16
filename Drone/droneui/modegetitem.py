@@ -8,8 +8,9 @@ from pyglet.window import key
 
 # This is a disposable Mode!
 class ModeGetItem(UIMode):
-    def __init__(self, window, inventory, player_drone):
+    def __init__(self, factory_modes, window, player_drone, inventory):
         print "ModeGetItem was constructed!"
+        self.factory_modes = factory_modes
         self.window = window
         self.inventory = inventory
         self.player_drone = player_drone

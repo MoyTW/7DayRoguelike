@@ -10,8 +10,8 @@ import warnings
 
 
 class ModeExploration(ModeMainWindow):
-    def __init__(self, mode_list, player_drone, camera, window, level):
-        super(ModeExploration, self).__init__(mode_list)
+    def __init__(self, factory_modes, player_drone, camera, window, level):
+        super(ModeExploration, self).__init__(factory_modes)
         self.player_drone = player_drone
         self.camera = camera
         self.window = window
@@ -22,8 +22,6 @@ class ModeExploration(ModeMainWindow):
         next_mode = super(ModeExploration, self).handle_keys(symbol, modifiers, None)
         if next_mode is None:
             return self.exploration_handle_keys(symbol, modifiers)
-            #return self
-            #return self.exploration_handle_keys(symbol, modifiers)
         else:
             return next_mode
 
@@ -68,9 +66,12 @@ class ModeExploration(ModeMainWindow):
                 print "You cannot get anything! Your inventory is full!"
                 return self
             cell = self.level.at(self.player_drone.current_cell.x, self.player_drone.current_cell.y)
+            # See if you can't compress these into one line.
             list_without_drone = list(cell.contains)
             list_without_drone.remove(self.player_drone)
+
             inventory = Inventory(contains=list_without_drone)
-            return ModeGetItem(self.window, inventory, self.player_drone)
+
+            return self.factory_modes.create_GetItem(inventory)
 
         return self
